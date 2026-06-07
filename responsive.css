@@ -65,7 +65,7 @@ footer {
 
 main h1,
 section h1 {
-  font-size: clamp(2.25rem, 6.5vw, 4.5rem) !important;
+  font-size: clamp(2rem, 4.2vw, 3.8rem) !important;
   line-height: 1.08 !important;
   letter-spacing: 0 !important;
 }
