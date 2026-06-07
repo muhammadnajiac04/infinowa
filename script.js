@@ -1,13 +1,16 @@
 (function () {
   "use strict";
 
+  // Easy manual edit area: update this fallback if the page has no WhatsApp link.
+  const FALLBACK_WHATSAPP_NUMBER = "97430975205";
+
   const $ = (selector, root = document) => root.querySelector(selector);
   const $$ = (selector, root = document) => Array.from(root.querySelectorAll(selector));
 
   function getWhatsAppNumber() {
     const link = $('a[href*="wa.me/"]');
     const match = link ? link.href.match(/wa\.me\/(\d+)/) : null;
-    return match ? match[1] : "97430975205";
+    return match ? match[1] : FALLBACK_WHATSAPP_NUMBER;
   }
 
   function showToast(title, text, type = "success") {

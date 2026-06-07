@@ -1,0 +1,307 @@
+/*
+  INFINOWA responsive edit file
+  Change the values below to tune the full website without editing every page.
+*/
+:root {
+  --brand-primary: #4f46e5;
+  --brand-dark: #111827;
+  --page-max: 80rem;
+  --section-y: clamp(3.5rem, 7vw, 5rem);
+  --section-x: clamp(1rem, 4vw, 3rem);
+  --card-radius: clamp(1.25rem, 4vw, 2rem);
+  --hero-radius: clamp(1.5rem, 5vw, 3rem);
+  --shadow-soft: 0 18px 45px rgba(15, 23, 42, 0.08);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  min-width: 320px;
+}
+
+img,
+iframe {
+  max-width: 100%;
+}
+
+button,
+a,
+input,
+select,
+textarea {
+  -webkit-tap-highlight-color: transparent;
+}
+
+button,
+a {
+  touch-action: manipulation;
+}
+
+header {
+  gap: 1rem;
+}
+
+header img[alt*="Logo"] {
+  flex: 0 0 auto;
+}
+
+header nav a,
+header nav span {
+  white-space: nowrap;
+}
+
+main,
+section,
+footer {
+  overflow-wrap: anywhere;
+}
+
+main h1,
+section h1 {
+  font-size: clamp(2.25rem, 6.5vw, 4.5rem) !important;
+  line-height: 1.08 !important;
+  letter-spacing: 0 !important;
+}
+
+section h2,
+main h2 {
+  font-size: clamp(2rem, 5vw, 3.5rem) !important;
+  line-height: 1.12 !important;
+  letter-spacing: 0 !important;
+}
+
+p,
+li,
+label,
+input,
+select,
+textarea {
+  line-height: 1.65;
+}
+
+.shadow-xl,
+.shadow-2xl {
+  box-shadow: var(--shadow-soft);
+}
+
+.rounded-\[3rem\],
+.rounded-\[2\.5rem\],
+.rounded-\[2rem\] {
+  border-radius: var(--hero-radius);
+}
+
+.rounded-3xl {
+  border-radius: var(--card-radius);
+}
+
+.mobile-menu-panel {
+  max-height: calc(100vh - 7rem);
+  overflow-y: auto;
+}
+
+.site-toast {
+  left: 1rem;
+  right: 1rem;
+  max-width: 26rem;
+  margin-left: auto;
+}
+
+.form-input {
+  width: 100%;
+  padding: 1rem 1.5rem;
+  border-radius: 9999px;
+  border: 1px solid #e2e8f0;
+  background: rgba(248, 250, 252, 0.7);
+  outline: none;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
+}
+
+.form-input:focus,
+textarea:focus {
+  border-color: var(--brand-primary);
+  box-shadow: 0 0 0 3px rgba(79, 70, 229, 0.16);
+  background: #ffffff;
+}
+
+.used-card {
+  display: flex;
+  flex-direction: column;
+}
+
+.used-card ul {
+  flex: 1;
+}
+
+[class*="-mr-16"][class*="blur-3xl"] {
+  display: none;
+}
+
+@media (max-width: 1023px) {
+  header {
+    padding: 0.75rem var(--section-x) !important;
+  }
+
+  header > div:last-child {
+    margin-left: auto;
+  }
+
+  header > div:last-child > button {
+    display: none;
+  }
+
+  header > div:last-child .border-l {
+    display: none;
+  }
+
+  .mobile-menu-button {
+    order: 2;
+  }
+
+  .mobile-menu-panel {
+    top: 5.5rem;
+  }
+}
+
+@media (max-width: 767px) {
+  header img[alt*="Logo"] {
+    width: 3rem !important;
+    height: 3rem !important;
+  }
+
+  header .font-extrabold.text-xl {
+    font-size: 1.05rem !important;
+  }
+
+  section,
+  main {
+    padding-left: var(--section-x) !important;
+    padding-right: var(--section-x) !important;
+  }
+
+  section {
+    padding-top: 3.5rem !important;
+    padding-bottom: 3.5rem !important;
+  }
+
+  main {
+    padding-top: 2.5rem !important;
+    padding-bottom: 3.5rem !important;
+  }
+
+  .gap-12,
+  .gap-14,
+  .gap-16 {
+    gap: 2rem !important;
+  }
+
+  .space-y-8 > :not([hidden]) ~ :not([hidden]) {
+    margin-top: 1.5rem !important;
+  }
+
+  .p-12,
+  .md\:p-12,
+  .md\:p-16 {
+    padding: 1.5rem !important;
+  }
+
+  .px-8 {
+    padding-left: 1.25rem !important;
+    padding-right: 1.25rem !important;
+  }
+
+  .py-4,
+  .py-5 {
+    padding-top: 0.9rem !important;
+    padding-bottom: 0.9rem !important;
+  }
+
+  .text-lg {
+    font-size: 1rem !important;
+  }
+
+  .text-xl {
+    font-size: 1.1rem !important;
+  }
+
+  .text-2xl {
+    font-size: 1.35rem !important;
+  }
+
+  .text-3xl {
+    font-size: 1.7rem !important;
+  }
+
+  .text-4xl {
+    font-size: 2rem !important;
+  }
+
+  .h-\[500px\],
+  .md\:h-\[600px\] {
+    height: auto !important;
+    min-height: 20rem;
+  }
+
+  main .grid.grid-cols-2.gap-4 {
+    height: auto !important;
+  }
+
+  main .grid.grid-cols-2.gap-4 > div {
+    padding-top: 0 !important;
+  }
+
+  main .grid.grid-cols-2.gap-4 img {
+    min-height: 11rem;
+  }
+
+  iframe {
+    min-height: 20rem;
+  }
+
+  .fixed.bottom-6.left-6 {
+    left: 1rem !important;
+    bottom: 1rem !important;
+  }
+
+  .fixed.bottom-6.right-6 {
+    right: 1rem !important;
+    bottom: 1rem !important;
+  }
+
+  .fixed.bottom-6 a {
+    width: 3.25rem !important;
+    height: 3.25rem !important;
+  }
+
+  .used-card ul {
+    grid-template-columns: 1fr !important;
+  }
+
+  #usedGrid {
+    gap: 1.25rem !important;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  main h1,
+  section h1 {
+    font-size: clamp(3rem, 7vw, 4rem) !important;
+  }
+
+  section,
+  main {
+    padding-left: 2rem !important;
+    padding-right: 2rem !important;
+  }
+
+  .h-\[500px\],
+  .md\:h-\[600px\] {
+    height: 32rem !important;
+  }
+}
