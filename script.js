@@ -1,11 +1,14 @@
 (function () {
   "use strict";
 
-  const phoneNumber = "97430975205";
-  const whatsappMessage = "Hello INFINOWA, I want to repair my device.";
-
   const $ = (selector, root = document) => root.querySelector(selector);
   const $$ = (selector, root = document) => Array.from(root.querySelectorAll(selector));
+
+  function getWhatsAppNumber() {
+    const link = $('a[href*="wa.me/"]');
+    const match = link ? link.href.match(/wa\.me\/(\d+)/) : null;
+    return match ? match[1] : "97430975205";
+  }
 
   function showToast(title, text, type = "success") {
     const oldToast = $(".site-toast");
@@ -58,6 +61,7 @@
         <a href="index.html" class="px-4 py-3 rounded-2xl hover:bg-indigo-50 hover:text-primary">Home</a>
         <a href="about.html" class="px-4 py-3 rounded-2xl hover:bg-indigo-50 hover:text-primary">About Us</a>
         <button type="button" data-mobile-repairs class="text-left px-4 py-3 rounded-2xl hover:bg-indigo-50 hover:text-primary">Repairs</button>
+        <a href="used.html" class="px-4 py-3 rounded-2xl hover:bg-indigo-50 hover:text-primary">Used</a>
         <a href="contact.html" class="px-4 py-3 rounded-2xl hover:bg-indigo-50 hover:text-primary">Contact Us</a>
       </div>
     `;
@@ -283,7 +287,7 @@
 
       setTimeout(() => {
         showToast("Request ready", "WhatsApp will open with your repair details.", "success");
-        window.open(`https://wa.me/${phoneNumber}?text=${encodeURIComponent(text)}`, "_blank");
+        window.open(`https://wa.me/${getWhatsAppNumber()}?text=${encodeURIComponent(text)}`, "_blank");
         submit.disabled = false;
         submit.innerHTML = original;
         form.reset();
@@ -302,6 +306,46 @@
     });
   }
 
+  function setupUsedLaptopPage() {
+    const cards = $$("[data-used-card]");
+    if (!cards.length) return;
+
+    const search = $("#usedSearch");
+    const brandFilter = $("#usedBrandFilter");
+    const resultCount = $("#usedResultCount");
+    const emptyState = $("#usedEmptyState");
+
+    const applyFilters = () => {
+      const query = (search ? search.value : "").trim().toLowerCase();
+      const brand = brandFilter ? brandFilter.value : "all";
+      let visible = 0;
+
+      cards.forEach((card) => {
+        const matchesBrand = brand === "all" || card.dataset.brand === brand;
+        const matchesQuery = !query || card.textContent.toLowerCase().includes(query);
+        const show = matchesBrand && matchesQuery;
+        card.classList.toggle("hidden", !show);
+        if (show) visible += 1;
+      });
+
+      if (resultCount) resultCount.textContent = String(visible);
+      if (emptyState) emptyState.classList.toggle("hidden", visible !== 0);
+    };
+
+    if (search) search.addEventListener("input", applyFilters);
+    if (brandFilter) brandFilter.addEventListener("change", applyFilters);
+
+    $$("[data-used-enquire]").forEach((button) => {
+      button.addEventListener("click", () => {
+        const card = button.closest("[data-used-card]");
+        const title = card ? card.dataset.title : "Used Laptop";
+        window.location.href = `contact.html?service=${encodeURIComponent(`Used Laptop Enquiry - ${title}`)}`;
+      });
+    });
+
+    applyFilters();
+  }
+
   document.addEventListener("DOMContentLoaded", () => {
     setupMobileMenu();
     setupRepairsMenu();
@@ -311,5 +355,6 @@
     setupTestimonials();
     setupContactForm();
     setupImageFallbacks();
+    setupUsedLaptopPage();
   });
 })();

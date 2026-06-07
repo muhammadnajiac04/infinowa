@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Used Laptops in Qatar - INFINOWA</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="stylefornewge/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#4F46E5',
+                        dark: '#111827',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            color: #111827;
+            scroll-behavior: smooth;
+        }
+        .btn-hover:hover {
+            filter: brightness(1.1);
+            transform: translateY(-1px);
+        }
+    </style>
+</head>
+<body class="bg-white overflow-x-hidden">
+
+    <!-- Navigation -->
+    <header class="w-full py-4 px-6 md:px-12 flex items-center justify-between bg-white sticky top-0 z-50 shadow-sm">
+        <div class="flex items-center">
+            <div class="flex items-center gap-2">
+                <img src="image/logo.png" alt="INFINOWA Logo" class="w-16 h-16 object-contain" />
+                <div class="font-extrabold text-xl tracking-tighter text-dark">
+                    INFINOWA<span class="text-primary"></span>
+                </div>
+            </div>
+        </div>
+
+        <nav class="hidden lg:flex items-center space-x-8 font-semibold text-sm uppercase text-slate-600">
+            <a href="index.html" class="hover:text-primary transition-colors">Home</a>
+            <a href="about.html" class="hover:text-primary transition-colors">About Us</a>
+            <div class="relative group cursor-pointer">
+                <span class="hover:text-primary transition-colors">Repairs <i class="fa-solid fa-chevron-down text-[10px] ml-1"></i></span>
+            </div>
+            <a href="used.html" class="hover:text-primary transition-colors">Used</a>
+            <a href="#" class="hover:text-primary transition-colors">Blogs</a>
+            <a href="contact.html" class="hover:text-primary transition-colors">Contact Us</a>
+        </nav>
+
+        <div class="flex items-center space-x-4">
+            <button class="bg-primary text-white px-6 py-2.5 rounded-full font-bold text-sm btn-hover transition-all flex items-center shadow-lg shadow-indigo-100">
+                Repair My Device <i class="fa-solid fa-arrow-right ml-2 text-xs"></i>
+            </button>
+            <div class="hidden sm:flex items-center space-x-3 text-xs font-bold border-l pl-4">
+                <div class="flex flex-col items-center cursor-pointer">
+                    <img src="https://flagcdn.com/w20/gb.png" alt="English" class="w-5 h-3 object-cover rounded-sm">
+                    <span class="mt-1 text-dark">en</span>
+                </div>
+                <div class="flex flex-col items-center cursor-pointer opacity-40">
+                    <img src="https://flagcdn.com/w20/qa.png" alt="Arabic" class="w-5 h-3 object-cover rounded-sm">
+                    <span class="mt-1 text-dark">ar</span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero -->
+    <main>
+        <section class="max-w-7xl mx-auto px-6 md:px-12 py-14 md:py-20 grid grid-cols-1 lg:grid-cols-2 gap-14 items-center border-b border-slate-100">
+            <div class="space-y-8">
+                <div class="inline-flex items-center gap-2 bg-indigo-50 text-primary px-4 py-2 rounded-full text-xs font-black uppercase tracking-widest">
+                    <i class="fa-solid fa-laptop"></i> Tested Used Laptops
+                </div>
+                <h1 class="text-5xl md:text-6xl font-extrabold leading-[1.08] tracking-tight text-dark">
+                    Quality Used <span class="text-primary">Laptops</span> in Qatar
+                </h1>
+                <p class="text-slate-500 text-lg leading-relaxed max-w-xl">
+                    Browse inspected business and student laptops ready for office work, study, browsing, design basics, and daily use. Every device is checked by INFINOWA technicians before listing.
+                </p>
+                <div class="grid grid-cols-2 sm:grid-cols-4 gap-4">
+                    <div class="bg-slate-50 rounded-3xl p-5 border border-slate-100">
+                        <p class="text-3xl font-black text-dark">12</p>
+                        <p class="text-xs font-bold uppercase text-slate-400">Point Check</p>
+                    </div>
+                    <div class="bg-slate-50 rounded-3xl p-5 border border-slate-100">
+                        <p class="text-3xl font-black text-dark">3</p>
+                        <p class="text-xs font-bold uppercase text-slate-400">Months Warranty</p>
+                    </div>
+                    <div class="bg-slate-50 rounded-3xl p-5 border border-slate-100">
+                        <p class="text-3xl font-black text-dark">SSD</p>
+                        <p class="text-xs font-bold uppercase text-slate-400">Fast Storage</p>
+                    </div>
+                    <div class="bg-slate-50 rounded-3xl p-5 border border-slate-100">
+                        <p class="text-3xl font-black text-dark">QA</p>
+                        <p class="text-xs font-bold uppercase text-slate-400">Doha Pickup</p>
+                    </div>
+                </div>
+                <div class="flex flex-wrap gap-4">
+                    <a href="#used-laptops" class="bg-primary text-white px-8 py-4 rounded-full font-bold text-lg btn-hover transition-all shadow-xl shadow-indigo-200">
+                        View Laptops <i class="fa-solid fa-arrow-down ml-2 text-sm"></i>
+                    </a>
+                    <a href="https://wa.me/97430975205" target="_blank" class="bg-slate-100 text-dark px-8 py-4 rounded-full font-bold text-lg hover:bg-slate-200 transition-colors">
+                        WhatsApp Us <i class="fa-brands fa-whatsapp ml-2 text-[#25D366]"></i>
+                    </a>
+                </div>
+            </div>
+
+            <div class="relative">
+                <div class="absolute -top-8 -left-8 w-40 h-40 bg-indigo-100 rounded-full blur-3xl"></div>
+                <div class="relative bg-dark rounded-[3rem] overflow-hidden shadow-2xl">
+                    <img src="https://images.unsplash.com/photo-1496181133206-80ce9b88a853?auto=format&fit=crop&q=80&w=1200" alt="Used laptop desk setup" class="w-full h-[520px] object-cover opacity-80">
+                    <div class="absolute bottom-6 left-6 right-6 bg-white/95 backdrop-blur p-6 rounded-[2rem] shadow-xl">
+                        <div class="flex items-center justify-between gap-6">
+                            <div>
+                                <p class="text-xs font-black uppercase tracking-widest text-slate-400">Starting From</p>
+                                <p class="text-4xl font-black text-dark">QAR 699</p>
+                            </div>
+                            <div class="w-14 h-14 bg-primary text-white rounded-full flex items-center justify-center text-xl">
+                                <i class="fa-solid fa-shield-check"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Filters -->
+        <section id="used-laptops" class="max-w-7xl mx-auto px-6 md:px-12 py-16">
+            <div class="flex flex-col lg:flex-row justify-between items-start lg:items-end gap-8 mb-10">
+                <div>
+                    <p class="text-slate-500 font-bold uppercase tracking-widest text-xs mb-2">Available Stock</p>
+                    <h2 class="text-4xl md:text-5xl font-extrabold text-dark">Used Laptop Collection</h2>
+                </div>
+                <div class="w-full lg:w-auto flex flex-col sm:flex-row gap-3">
+                    <div class="relative">
+                        <i class="fa-solid fa-magnifying-glass absolute left-5 top-1/2 -translate-y-1/2 text-slate-400"></i>
+                        <input id="usedSearch" type="search" placeholder="Search model, CPU, RAM..." class="w-full sm:w-80 pl-12 pr-5 py-4 rounded-full border border-slate-200 bg-slate-50 focus:bg-white focus:border-primary outline-none transition-all">
+                    </div>
+                    <select id="usedBrandFilter" class="px-6 py-4 rounded-full border border-slate-200 bg-slate-50 focus:bg-white focus:border-primary outline-none font-bold text-slate-600">
+                        <option value="all">All Brands</option>
+                        <option value="dell">Dell</option>
+                        <option value="hp">HP</option>
+                        <option value="lenovo">Lenovo</option>
+                        <option value="apple">Apple</option>
+                        <option value="asus">Asus</option>
+                        <option value="acer">Acer</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="flex items-center justify-between gap-4 mb-8">
+                <p class="text-sm font-bold text-slate-500"><span id="usedResultCount">6</span> laptops available</p>
+                <div class="hidden md:flex items-center gap-2 text-xs font-black uppercase tracking-widest text-slate-400">
+                    <i class="fa-solid fa-circle-check text-primary"></i> Tested battery
+                    <i class="fa-solid fa-circle-check text-primary ml-4"></i> Clean installed
+                    <i class="fa-solid fa-circle-check text-primary ml-4"></i> Warranty support
+                </div>
+            </div>
+
+            <div id="usedGrid" class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-8">
+                <article data-used-card data-brand="dell" data-title="Dell Latitude 5420" class="used-card bg-white rounded-[2rem] p-6 shadow-xl border border-slate-100 hover:border-primary transition-all">
+                    <div class="h-56 rounded-2xl overflow-hidden bg-slate-100 mb-6">
+                        <img src="https://images.unsplash.com/photo-1588872657578-7efd1f1555ed?auto=format&fit=crop&q=80&w=800" alt="Dell Latitude 5420 used laptop" class="w-full h-full object-cover">
+                    </div>
+                    <div class="flex items-start justify-between gap-4 mb-4">
+                        <div>
+                            <p class="text-xs font-black uppercase tracking-widest text-primary">Business Laptop</p>
+                            <h3 class="text-2xl font-extrabold text-dark">Dell Latitude 5420</h3>
+                        </div>
+                        <span class="bg-green-50 text-green-700 px-3 py-1 rounded-full text-xs font-black">In Stock</span>
+                    </div>
+                    <ul class="grid grid-cols-2 gap-3 text-sm text-slate-600 mb-6">
+                        <li><b>CPU:</b> Intel i5 11th Gen</li>
+                        <li><b>RAM:</b> 16GB</li>
+                        <li><b>Storage:</b> 512GB SSD</li>
+                        <li><b>Screen:</b> 14" FHD</li>
+                        <li><b>Condition:</b> Excellent</li>
+                        <li><b>Warranty:</b> 3 Months</li>
+                    </ul>
+                    <div class="flex items-center justify-between gap-4">
+                        <p class="text-3xl font-black text-dark">QAR 1,299</p>
+                        <button data-used-enquire class="bg-primary text-white px-5 py-3 rounded-full font-bold btn-hover transition-all">Enquire</button>
+                    </div>
+                </article>
+
+                <article data-used-card data-brand="hp" data-title="HP EliteBook 840 G7" class="used-card bg-white rounded-[2rem] p-6 shadow-xl border border-slate-100 hover:border-primary transition-all">
+                    <div class="h-56 rounded-2xl overflow-hidden bg-slate-100 mb-6">
+                        <img src="https://images.unsplash.com/photo-1593642632823-8f785ba67e45?auto=format&fit=crop&q=80&w=800" alt="HP EliteBook 840 G7 used laptop" class="w-full h-full object-cover">
+                    </div>
+                    <div class="flex items-start justify-between gap-4 mb-4">
+                        <div>
+                            <p class="text-xs font-black uppercase tracking-widest text-primary">Office Ready</p>
+                            <h3 class="text-2xl font-extrabold text-dark">HP EliteBook 840 G7</h3>
+                        </div>
+                        <span class="bg-green-50 text-green-700 px-3 py-1 rounded-full text-xs font-black">In Stock</span>
+                    </div>
+                    <ul class="grid grid-cols-2 gap-3 text-sm text-slate-600 mb-6">
+                        <li><b>CPU:</b> Intel i7 10th Gen</li>
+                        <li><b>RAM:</b> 16GB</li>
+                        <li><b>Storage:</b> 512GB SSD</li>
+                        <li><b>Screen:</b> 14" FHD</li>
+                        <li><b>Condition:</b> Very Good</li>
+                        <li><b>Warranty:</b> 3 Months</li>
+                    </ul>
+                    <div class="flex items-center justify-between gap-4">
+                        <p class="text-3xl font-black text-dark">QAR 1,499</p>
+                        <button data-used-enquire class="bg-primary text-white px-5 py-3 rounded-full font-bold btn-hover transition-all">Enquire</button>
+                    </div>
+                </article>
+
+                <article data-used-card data-brand="lenovo" data-title="Lenovo ThinkPad T480" class="used-card bg-white rounded-[2rem] p-6 shadow-xl border border-slate-100 hover:border-primary transition-all">
+                    <div class="h-56 rounded-2xl overflow-hidden bg-slate-100 mb-6">
+                        <img src="https://images.unsplash.com/photo-1517336714731-489689fd1ca8?auto=format&fit=crop&q=80&w=800" alt="Lenovo ThinkPad T480 used laptop" class="w-full h-full object-cover">
+                    </div>
+                    <div class="flex items-start justify-between gap-4 mb-4">
+                        <div>
+                            <p class="text-xs font-black uppercase tracking-widest text-primary">Student Choice</p>
+                            <h3 class="text-2xl font-extrabold text-dark">Lenovo ThinkPad T480</h3>
+                        </div>
+                        <span class="bg-green-50 text-green-700 px-3 py-1 rounded-full text-xs font-black">In Stock</span>
+                    </div>
+                    <ul class="grid grid-cols-2 gap-3 text-sm text-slate-600 mb-6">
+                        <li><b>CPU:</b> Intel i5 8th Gen</li>
+                        <li><b>RAM:</b> 8GB</li>
+                        <li><b>Storage:</b> 256GB SSD</li>
+                        <li><b>Screen:</b> 14" FHD</li>
+                        <li><b>Condition:</b> Good</li>
+                        <li><b>Warranty:</b> 3 Months</li>
+                    </ul>
+                    <div class="flex items-center justify-between gap-4">
+                        <p class="text-3xl font-black text-dark">QAR 899</p>
+                        <button data-used-enquire class="bg-primary text-white px-5 py-3 rounded-full font-bold btn-hover transition-all">Enquire</button>
+                    </div>
+                </article>
+
+                <article data-used-card data-brand="apple" data-title="MacBook Air 2020" class="used-card bg-white rounded-[2rem] p-6 shadow-xl border border-slate-100 hover:border-primary transition-all">
+                    <div class="h-56 rounded-2xl overflow-hidden bg-slate-100 mb-6">
+                        <img src="https://images.unsplash.com/photo-1541807084-5c52b6b3adef?auto=format&fit=crop&q=80&w=800" alt="MacBook Air 2020 used laptop" class="w-full h-full object-cover">
+                    </div>
+                    <div class="flex items-start justify-between gap-4 mb-4">
+                        <div>
+                            <p class="text-xs font-black uppercase tracking-widest text-primary">Lightweight</p>
+                            <h3 class="text-2xl font-extrabold text-dark">MacBook Air 2020</h3>
+                        </div>
+                        <span class="bg-green-50 text-green-700 px-3 py-1 rounded-full text-xs font-black">In Stock</span>
+                    </div>
+                    <ul class="grid grid-cols-2 gap-3 text-sm text-slate-600 mb-6">
+                        <li><b>CPU:</b> Apple M1</li>
+                        <li><b>RAM:</b> 8GB</li>
+                        <li><b>Storage:</b> 256GB SSD</li>
+                        <li><b>Screen:</b> 13.3" Retina</li>
+                        <li><b>Condition:</b> Excellent</li>
+                        <li><b>Warranty:</b> 3 Months</li>
+                    </ul>
+                    <div class="flex items-center justify-between gap-4">
+                        <p class="text-3xl font-black text-dark">QAR 2,299</p>
+                        <button data-used-enquire class="bg-primary text-white px-5 py-3 rounded-full font-bold btn-hover transition-all">Enquire</button>
+                    </div>
+                </article>
+
+                <article data-used-card data-brand="asus" data-title="Asus VivoBook 15" class="used-card bg-white rounded-[2rem] p-6 shadow-xl border border-slate-100 hover:border-primary transition-all">
+                    <div class="h-56 rounded-2xl overflow-hidden bg-slate-100 mb-6">
+                        <img src="https://images.unsplash.com/photo-1525547719571-a2d4ac8945e2?auto=format&fit=crop&q=80&w=800" alt="Asus VivoBook 15 used laptop" class="w-full h-full object-cover">
+                    </div>
+                    <div class="flex items-start justify-between gap-4 mb-4">
+                        <div>
+                            <p class="text-xs font-black uppercase tracking-widest text-primary">Daily Use</p>
+                            <h3 class="text-2xl font-extrabold text-dark">Asus VivoBook 15</h3>
+                        </div>
+                        <span class="bg-green-50 text-green-700 px-3 py-1 rounded-full text-xs font-black">In Stock</span>
+                    </div>
+                    <ul class="grid grid-cols-2 gap-3 text-sm text-slate-600 mb-6">
+                        <li><b>CPU:</b> Intel i5 10th Gen</li>
+                        <li><b>RAM:</b> 8GB</li>
+                        <li><b>Storage:</b> 512GB SSD</li>
+                        <li><b>Screen:</b> 15.6" FHD</li>
+                        <li><b>Condition:</b> Very Good</li>
+                        <li><b>Warranty:</b> 3 Months</li>
+                    </ul>
+                    <div class="flex items-center justify-between gap-4">
+                        <p class="text-3xl font-black text-dark">QAR 1,099</p>
+                        <button data-used-enquire class="bg-primary text-white px-5 py-3 rounded-full font-bold btn-hover transition-all">Enquire</button>
+                    </div>
+                </article>
+
+                <article data-used-card data-brand="acer" data-title="Acer Aspire 5" class="used-card bg-white rounded-[2rem] p-6 shadow-xl border border-slate-100 hover:border-primary transition-all">
+                    <div class="h-56 rounded-2xl overflow-hidden bg-slate-100 mb-6">
+                        <img src="https://images.unsplash.com/photo-1484788984921-03950022c9ef?auto=format&fit=crop&q=80&w=800" alt="Acer Aspire 5 used laptop" class="w-full h-full object-cover">
+                    </div>
+                    <div class="flex items-start justify-between gap-4 mb-4">
+                        <div>
+                            <p class="text-xs font-black uppercase tracking-widest text-primary">Budget Pick</p>
+                            <h3 class="text-2xl font-extrabold text-dark">Acer Aspire 5</h3>
+                        </div>
+                        <span class="bg-green-50 text-green-700 px-3 py-1 rounded-full text-xs font-black">In Stock</span>
+                    </div>
+                    <ul class="grid grid-cols-2 gap-3 text-sm text-slate-600 mb-6">
+                        <li><b>CPU:</b> Intel i3 10th Gen</li>
+                        <li><b>RAM:</b> 8GB</li>
+                        <li><b>Storage:</b> 256GB SSD</li>
+                        <li><b>Screen:</b> 15.6" FHD</li>
+                        <li><b>Condition:</b> Good</li>
+                        <li><b>Warranty:</b> 3 Months</li>
+                    </ul>
+                    <div class="flex items-center justify-between gap-4">
+                        <p class="text-3xl font-black text-dark">QAR 699</p>
+                        <button data-used-enquire class="bg-primary text-white px-5 py-3 rounded-full font-bold btn-hover transition-all">Enquire</button>
+                    </div>
+                </article>
+            </div>
+
+            <div id="usedEmptyState" class="hidden text-center bg-slate-50 border border-slate-100 rounded-[2rem] p-12 mt-8">
+                <div class="w-16 h-16 bg-white rounded-full shadow-lg mx-auto flex items-center justify-center text-primary text-2xl mb-4">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </div>
+                <h3 class="text-2xl font-black text-dark mb-2">No laptops found</h3>
+                <p class="text-slate-500">Try another brand or search term, or contact us for the latest stock.</p>
+            </div>
+        </section>
+
+        <!-- Why Buy Used -->
+        <section class="bg-slate-50 py-20">
+            <div class="max-w-7xl mx-auto px-6 md:px-12">
+                <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+                    <div class="lg:col-span-1">
+                        <p class="text-slate-500 font-bold uppercase tracking-widest text-xs mb-2">What We Check</p>
+                        <h2 class="text-4xl font-extrabold text-dark leading-tight">Every used laptop is inspected before sale.</h2>
+                    </div>
+                    <div class="lg:col-span-2 grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div class="bg-white p-7 rounded-3xl border border-slate-100">
+                            <i class="fa-solid fa-battery-three-quarters text-primary text-2xl mb-5"></i>
+                            <h3 class="font-black text-xl mb-2">Battery Health</h3>
+                            <p class="text-slate-500 text-sm leading-relaxed">We check charging, backup behavior, adapter condition, and battery wear before listing.</p>
+                        </div>
+                        <div class="bg-white p-7 rounded-3xl border border-slate-100">
+                            <i class="fa-solid fa-hard-drive text-primary text-2xl mb-5"></i>
+                            <h3 class="font-black text-xl mb-2">Storage & Speed</h3>
+                            <p class="text-slate-500 text-sm leading-relaxed">SSD performance, startup speed, memory, and system stability are tested for daily use.</p>
+                        </div>
+                        <div class="bg-white p-7 rounded-3xl border border-slate-100">
+                            <i class="fa-solid fa-display text-primary text-2xl mb-5"></i>
+                            <h3 class="font-black text-xl mb-2">Screen & Keyboard</h3>
+                            <p class="text-slate-500 text-sm leading-relaxed">Display, hinges, webcam, keyboard, touchpad, speakers, and ports are physically inspected.</p>
+                        </div>
+                        <div class="bg-white p-7 rounded-3xl border border-slate-100">
+                            <i class="fa-solid fa-shield-halved text-primary text-2xl mb-5"></i>
+                            <h3 class="font-black text-xl mb-2">Warranty Support</h3>
+                            <p class="text-slate-500 text-sm leading-relaxed">Selected used laptops include INFINOWA support so you can buy with more confidence.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA -->
+        <section class="max-w-7xl mx-auto px-6 md:px-12 py-20">
+            <div class="bg-dark text-white rounded-[3rem] p-10 md:p-14 flex flex-col lg:flex-row justify-between items-start lg:items-center gap-8 overflow-hidden relative">
+                <div class="absolute right-0 bottom-0 text-white/5 text-[16rem] pointer-events-none">
+                    <i class="fa-solid fa-laptop-code"></i>
+                </div>
+                <div class="relative z-10 max-w-2xl">
+                    <p class="text-primary font-black uppercase tracking-widest text-xs mb-3">Need Help Choosing?</p>
+                    <h2 class="text-4xl md:text-5xl font-extrabold mb-4">Tell us your budget and usage.</h2>
+                    <p class="text-slate-300 leading-relaxed">We can recommend a laptop for students, office users, business owners, designers, or home use based on your exact need.</p>
+                </div>
+                <a href="contact.html?service=Used%20Laptop%20Recommendation" class="relative z-10 bg-primary text-white px-8 py-4 rounded-full font-black btn-hover transition-all shadow-xl shadow-indigo-950">
+                    Ask For Recommendation <i class="fa-solid fa-arrow-right ml-2"></i>
+                </a>
+            </div>
+        </section>
+    </main>
+
+    <!-- Dark Footer -->
+    <footer class="bg-dark text-white pt-20 pb-10">
+        <div class="max-w-7xl mx-auto px-6 md:px-12">
+            <div class="flex flex-col md:flex-row justify-between items-start md:items-center border-b border-white/10 pb-12 mb-12 gap-8">
+                <div class="flex items-center gap-6">
+                    <div class="w-14 h-14 bg-primary rounded-full flex items-center justify-center text-2xl"><i class="fa-solid fa-headset"></i></div>
+                    <div>
+                        <p class="text-xl font-bold">Need Any Support For Your Device?</p>
+                    </div>
+                </div>
+                <div class="flex items-center gap-4">
+                    <div class="w-12 h-12 bg-primary/20 rounded-full flex items-center justify-center text-primary"><i class="fa-brands fa-whatsapp text-2xl"></i></div>
+                    <div>
+                        <p class="text-slate-400 text-xs font-bold uppercase">WhatsApp Us</p>
+                        <p class="text-lg font-black">+974 3097 5205</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-20">
+                <div>
+                    <div class="flex items-center gap-2 mb-8">
+                        <img src="image/logo.png" alt="INFINOWA Logo" class="w-20 h-20 object-contain" />
+                        <span class="font-black text-2xl tracking-tighter uppercase">INFINOWA</span>
+                    </div>
+                    <p class="text-slate-400 text-sm leading-relaxed mb-8">Your trusted repair partner in Qatar for laptops, mobiles, tablets, and checked used computers.</p>
+                    <div class="flex gap-4">
+                        <a href="#" class="w-10 h-10 bg-white/5 rounded-full flex items-center justify-center hover:bg-primary transition-all"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="#" class="w-10 h-10 bg-white/5 rounded-full flex items-center justify-center hover:bg-primary transition-all"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="#" class="w-10 h-10 bg-white/5 rounded-full flex items-center justify-center hover:bg-primary transition-all"><i class="fa-brands fa-x-twitter"></i></a>
+                        <a href="#" class="w-10 h-10 bg-white/5 rounded-full flex items-center justify-center hover:bg-primary transition-all"><i class="fa-brands fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+
+                <div>
+                    <h4 class="text-xl font-bold mb-8">Used Laptops</h4>
+                    <ul class="space-y-4 text-slate-400 text-sm">
+                        <li class="flex items-center gap-2 hover:text-primary cursor-pointer"><i class="fa-solid fa-check text-primary text-[10px]"></i> Dell Latitude</li>
+                        <li class="flex items-center gap-2 hover:text-primary cursor-pointer"><i class="fa-solid fa-check text-primary text-[10px]"></i> HP EliteBook</li>
+                        <li class="flex items-center gap-2 hover:text-primary cursor-pointer"><i class="fa-solid fa-check text-primary text-[10px]"></i> Lenovo ThinkPad</li>
+                        <li class="flex items-center gap-2 hover:text-primary cursor-pointer"><i class="fa-solid fa-check text-primary text-[10px]"></i> MacBook Air</li>
+                        <li class="flex items-center gap-2 hover:text-primary cursor-pointer"><i class="fa-solid fa-check text-primary text-[10px]"></i> Asus VivoBook</li>
+                    </ul>
+                </div>
+
+                <div class="pt-16">
+                    <ul class="space-y-4 text-slate-400 text-sm">
+                        <li class="flex items-center gap-2 hover:text-primary cursor-pointer"><i class="fa-solid fa-check text-primary text-[10px]"></i> Battery testing</li>
+                        <li class="flex items-center gap-2 hover:text-primary cursor-pointer"><i class="fa-solid fa-check text-primary text-[10px]"></i> SSD upgrade</li>
+                        <li class="flex items-center gap-2 hover:text-primary cursor-pointer"><i class="fa-solid fa-check text-primary text-[10px]"></i> Windows install</li>
+                        <li class="flex items-center gap-2 hover:text-primary cursor-pointer"><i class="fa-solid fa-check text-primary text-[10px]"></i> Data transfer</li>
+                        <li class="flex items-center gap-2 hover:text-primary cursor-pointer"><i class="fa-solid fa-check text-primary text-[10px]"></i> Warranty support</li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="text-xl font-bold mb-8">Useful Links</h4>
+                    <ul class="space-y-4 text-slate-400 text-sm">
+                        <li class="hover:text-primary cursor-pointer">About us</li>
+                        <li class="hover:text-primary cursor-pointer">Laptop Repair Qatar</li>
+                        <li class="hover:text-primary cursor-pointer">Laptop Repair Doha</li>
+                        <li class="hover:text-primary cursor-pointer">Contact us</li>
+                        <li class="hover:text-primary cursor-pointer">Privacy Policy</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="flex flex-col md:flex-row justify-between items-center pt-10 border-t border-white/5 text-slate-500 text-xs">
+                <p>INFINOWA 2025 | All Rights Reserved</p>
+                <p class="hover:text-white cursor-pointer mt-4 md:mt-0">Contact Us</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Floating Action Buttons -->
+    <div class="fixed bottom-6 left-6 z-50">
+        <a href="https://wa.me/97430975205" target="_blank" class="w-14 h-14 bg-[#25D366] text-white rounded-full flex items-center justify-center shadow-2xl hover:scale-110 transition-transform">
+            <i class="fa-brands fa-whatsapp text-3xl"></i>
+        </a>
+    </div>
+
+    <div class="fixed bottom-6 right-6 z-50">
+        <a href="tel:+97430975205" class="w-14 h-14 bg-primary text-white rounded-full flex items-center justify-center shadow-2xl hover:scale-110 transition-transform">
+            <i class="fa-solid fa-phone text-2xl"></i>
+        </a>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
