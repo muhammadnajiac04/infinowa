@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>INFINOWA - Tech Repair Solutions in Qatar</title>
+    <title>About INFINOWA - Tech Repair Solutions in Qatar</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
@@ -12,8 +12,8 @@
             theme: {
                 extend: {
                     colors: {
-                        primary: '#4F46E5', // Indigo
-                        dark: '#111827',    // Slate Dark
+                        primary: '#4F46E5',
+                        dark: '#111827',
                     }
                 }
             }
@@ -29,19 +29,6 @@
             filter: brightness(1.1);
             transform: translateY(-1px);
         }
-        /* Custom curve for the process section */
-        .process-line {
-            position: absolute;
-            width: 100%;
-            height: 100px;
-            z-index: -1;
-        }
-        .faq-item:hover .faq-icon {
-            transform: rotate(180deg);
-        }
-        .faq-icon {
-            transition: transform 0.3s ease;
-        }
     </style>
     <link rel="stylesheet" href="responsive.css">
 </head>
@@ -51,12 +38,7 @@
     <header class="w-full py-4 px-6 md:px-12 flex items-center justify-between bg-white sticky top-0 z-50 shadow-sm">
         <div class="flex items-center">
             <div class="flex items-center gap-2">
-        <!-- Logo Image -->
-        <img 
-            src="image/logo.png" 
-            alt="INFINOWA Logo" 
-            class="w-16 h-16 object-contain"
-        />
+                <img src="image/logo.png" alt="INFINOWA Logo" class="w-16 h-16 object-contain" />
                 <div class="font-extrabold text-xl tracking-tighter text-dark">
                     INFINOWA<span class="text-primary"></span>
                 </div>
@@ -91,75 +73,216 @@
         </div>
     </header>
 
-<!--about-->
- <!-- Serving Regions -->
-    <section class="py-20 max-w-7xl mx-auto px-6 md:px-12">
-        <div class="flex items-center gap-4 mb-6">
-                <i class="fa-solid fa-location-dot"></i>
-            </div>
-            <h2 class="text-3xl font-extrabold text-dark">About</h2>
-        </div>
-        <p class="text-slate-500 max-w-3xl mb-12">Our skilled repair services cover the main neighboring locations of Qatar and the Doha region. No matter where you live, we promise to be swift, dependable, and expert help-provider.</p>
-
-
-<!-- Services Section -->
-    <section class="max-w-7xl mx-auto px-6 md:px-12 py-20">
-        <div class="flex flex-col md:flex-row justify-between items-start md:items-end mb-12 gap-6">
-            <div>
-                <p class="text-slate-500 font-bold uppercase tracking-widest text-xs mb-2 flex items-center gap-2">
-                    Services We Offer <i class="fa-solid fa-microchip text-primary"></i>
+    <main>
+        <!-- Hero -->
+        <section class="max-w-7xl mx-auto px-6 md:px-12 py-14 md:py-20 grid grid-cols-1 lg:grid-cols-2 gap-14 items-center border-b border-slate-100">
+            <div class="space-y-8">
+                <div class="inline-flex items-center gap-2 bg-indigo-50 text-primary px-4 py-2 rounded-full text-xs font-black uppercase tracking-widest">
+                    <i class="fa-solid fa-screwdriver-wrench"></i> About INFINOWA
+                </div>
+                <h1 class="text-5xl md:text-6xl font-extrabold leading-[1.08] tracking-tight text-dark">
+                    Reliable Tech Repair <span class="text-primary">Built Around Trust</span>
+                </h1>
+                <p class="text-slate-500 text-lg leading-relaxed max-w-xl">
+                    INFINOWA is a Qatar-based technology service center focused on dependable repair, device care, and honest support for laptops, mobile phones, iPads, and used computers.
                 </p>
-                <h2 class="text-4xl md:text-5xl font-extrabold text-dark leading-tight">
-                   What We Do
-                </h2>
-            </div>
-            <div class="flex items-center gap-4 bg-slate-50 p-4 rounded-2xl">
-
-    
-                </div>
-            <div class="flex flex-wrap items-center gap-4">
-                <button class="bg-primary text-white px-8 py-4 rounded-full font-bold text-lg btn-hover transition-all flex items-center shadow-xl shadow-indigo-200">
-                    Repair My Device <i class="fa-solid fa-arrow-right ml-3 text-sm"></i>
-                </button>
+                <div class="flex flex-wrap gap-4">
+                    <a href="contact.html?service=Device%20Repair" class="bg-primary text-white px-8 py-4 rounded-full font-bold text-lg btn-hover transition-all shadow-xl shadow-indigo-200">
+                        Book a Repair <i class="fa-solid fa-arrow-right ml-2 text-sm"></i>
+                    </a>
+                    <a href="tel:+97430975205" class="bg-slate-100 text-dark px-8 py-4 rounded-full font-bold text-lg hover:bg-slate-200 transition-colors">
+                        Call Us <i class="fa-solid fa-phone ml-2 text-primary"></i>
+                    </a>
                 </div>
             </div>
-        </div>
 
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <!-- Laptop Card -->
-            <div class="bg-white rounded-[2rem] p-6 shadow-xl border border-slate-100 group hover:border-primary transition-all">
-                <div class="h-64 rounded-2xl overflow-hidden mb-6 bg-slate-100">
-                    <img src="https://images.unsplash.com/photo-1588872657578-7efd1f1555ed?auto=format&fit=crop&q=80&w=600" class="w-full h-full object-cover group-hover:scale-105 transition-transform">
+            <div class="relative">
+                <div class="relative bg-dark rounded-[3rem] overflow-hidden shadow-2xl">
+                    <img src="https://images.unsplash.com/photo-1581092160562-40aa08e78837?auto=format&fit=crop&q=80&w=1200" alt="INFINOWA repair technician workspace" class="w-full h-[520px] object-cover opacity-80">
+                    <div class="absolute bottom-6 left-6 right-6 bg-white/95 backdrop-blur p-6 rounded-[2rem] shadow-xl">
+                        <div class="grid grid-cols-3 gap-4 text-center">
+                            <div>
+                                <p class="text-3xl font-black text-dark">Fast</p>
+                                <p class="text-xs font-bold uppercase text-slate-400">Diagnosis</p>
+                            </div>
+                            <div>
+                                <p class="text-3xl font-black text-dark">3M</p>
+                                <p class="text-xs font-bold uppercase text-slate-400">Warranty</p>
+                            </div>
+                            <div>
+                                <p class="text-3xl font-black text-dark">QA</p>
+                                <p class="text-xs font-bold uppercase text-slate-400">Qatar Service</p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <h3 class="text-2xl font-extrabold text-dark mb-4">Laptop Repair Services</h3>
-                <p class="text-slate-500 text-sm leading-relaxed mb-6">Facing issues with your Laptop? From Screen replacements to battery problems, our staff handles everything so your device runs like new once again.</p>
-                <a href="#" class="text-primary font-bold flex items-center gap-2 hover:gap-4 transition-all">Explore Service <i class="fa-solid fa-arrow-right"></i></a>
             </div>
-            <!-- Mobile Card (Active/Dark Theme) -->
-             <div class="bg-white rounded-[2rem] p-6 shadow-xl border border-slate-100 group hover:border-primary transition-all">
-                <div class="absolute top-0 right-0 w-32 h-32 bg-primary/20 rounded-full -mr-16 -mt-16 blur-3xl"></div>
-                <div class="h-64 rounded-2xl overflow-hidden mb-6">
-                    <img src="https://images.unsplash.com/photo-1576613109753-27804de2cba8?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" class="w-full h-full object-cover group-hover:scale-105 transition-transform">
+        </section>
+
+        <!-- Story -->
+        <section class="max-w-7xl mx-auto px-6 md:px-12 py-20">
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-10 items-start">
+                <div>
+                    <p class="text-slate-500 font-bold uppercase tracking-widest text-xs mb-2">Our Story</p>
+                    <h2 class="text-4xl md:text-5xl font-extrabold text-dark leading-tight">Practical repair help for everyday devices.</h2>
                 </div>
-                <h3 class="text-2xl font-extrabold text-dark mb-4">Mobile Phone Repairs</h3>
-                <p class="text-slate-400 text-sm leading-relaxed mb-6">From broken screens to connectivity issues, we offer professional mobile phone repairs to have you back connected without delays.</p>
-                <a href="#" class="text-primary font-bold flex items-center gap-2 hover:gap-4 transition-all">Explore Service <i class="fa-solid fa-arrow-right"></i></a>
-            </div>
-            <!-- iPad Card -->
-            <div class="bg-white rounded-[2rem] p-6 shadow-xl border border-slate-100 group hover:border-primary transition-all">
-                <div class="h-64 rounded-2xl overflow-hidden mb-6 bg-slate-100">
-                    <img src="https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?auto=format&fit=crop&q=80&w=600" class="w-full h-full object-cover group-hover:scale-105 transition-transform">
+                <div class="lg:col-span-2 grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <div class="bg-slate-50 rounded-[2rem] p-8 border border-slate-100">
+                        <i class="fa-solid fa-bullseye text-primary text-3xl mb-6"></i>
+                        <h3 class="text-2xl font-black text-dark mb-3">Our Mission</h3>
+                        <p class="text-slate-500 leading-relaxed">To make device repair simpler, clearer, and more dependable by combining skilled technicians, quality parts, and straightforward communication.</p>
+                    </div>
+                    <div class="bg-slate-50 rounded-[2rem] p-8 border border-slate-100">
+                        <i class="fa-solid fa-eye text-primary text-3xl mb-6"></i>
+                        <h3 class="text-2xl font-black text-dark mb-3">Our Vision</h3>
+                        <p class="text-slate-500 leading-relaxed">To become a trusted technology care partner in Qatar for repairs, upgrades, diagnostics, and carefully checked used laptops.</p>
+                    </div>
                 </div>
-                <h3 class="text-2xl font-extrabold text-dark mb-4">iPad Repairs</h3>
-                <p class="text-slate-500 text-sm leading-relaxed mb-6">Don't allow problems with the iPad to slow you down. We provide reliable and reasonably priced iPad repair solutions from hardware failure to software bugs.</p>
-                <a href="#" class="text-primary font-bold flex items-center gap-2 hover:gap-4 transition-all">Explore Service <i class="fa-solid fa-arrow-right"></i></a>
             </div>
-        </div>
-    </section>
+        </section>
 
+        <!-- Values -->
+        <section class="bg-slate-50 py-20">
+            <div class="max-w-7xl mx-auto px-6 md:px-12">
+                <div class="flex flex-col md:flex-row justify-between items-start md:items-end gap-8 mb-12">
+                    <div>
+                        <p class="text-slate-500 font-bold uppercase tracking-widest text-xs mb-2">Why Customers Choose Us</p>
+                        <h2 class="text-4xl md:text-5xl font-extrabold text-dark">What INFINOWA stands for</h2>
+                    </div>
+                    <a href="contact.html" class="bg-white text-dark px-6 py-3 rounded-full font-bold hover:bg-primary hover:text-white transition-all border border-slate-100">
+                        Contact Team <i class="fa-solid fa-arrow-right ml-2"></i>
+                    </a>
+                </div>
 
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                    <div class="bg-white p-7 rounded-3xl border border-slate-100">
+                        <i class="fa-solid fa-magnifying-glass-chart text-primary text-2xl mb-5"></i>
+                        <h3 class="font-black text-xl mb-2">Clear Diagnosis</h3>
+                        <p class="text-slate-500 text-sm leading-relaxed">We inspect the issue first and explain the repair path before starting work.</p>
+                    </div>
+                    <div class="bg-white p-7 rounded-3xl border border-slate-100">
+                        <i class="fa-solid fa-microchip text-primary text-2xl mb-5"></i>
+                        <h3 class="font-black text-xl mb-2">Quality Parts</h3>
+                        <p class="text-slate-500 text-sm leading-relaxed">We focus on reliable replacement parts and practical repair standards.</p>
+                    </div>
+                    <div class="bg-white p-7 rounded-3xl border border-slate-100">
+                        <i class="fa-solid fa-clock text-primary text-2xl mb-5"></i>
+                        <h3 class="font-black text-xl mb-2">Fast Turnaround</h3>
+                        <p class="text-slate-500 text-sm leading-relaxed">Common repairs are handled quickly so your downtime stays low.</p>
+                    </div>
+                    <div class="bg-white p-7 rounded-3xl border border-slate-100">
+                        <i class="fa-solid fa-shield-halved text-primary text-2xl mb-5"></i>
+                        <h3 class="font-black text-xl mb-2">Warranty Support</h3>
+                        <p class="text-slate-500 text-sm leading-relaxed">Eligible repairs and selected used laptops include support after service.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-    
+        <!-- Services -->
+        <section class="max-w-7xl mx-auto px-6 md:px-12 py-20">
+            <div class="text-center max-w-3xl mx-auto mb-12">
+                <p class="text-slate-500 font-bold uppercase tracking-widest text-xs mb-2">What We Do</p>
+                <h2 class="text-4xl md:text-5xl font-extrabold text-dark mb-5">Complete device care under one roof</h2>
+                <p class="text-slate-500 leading-relaxed">From broken screens to slow systems, we help customers keep their technology useful, fast, and ready for work.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="bg-white rounded-[2rem] p-6 shadow-xl border border-slate-100 hover:border-primary transition-all">
+                    <div class="h-56 rounded-2xl overflow-hidden mb-6 bg-slate-100">
+                        <img src="https://images.unsplash.com/photo-1588872657578-7efd1f1555ed?auto=format&fit=crop&q=80&w=700" alt="Laptop repair service" class="w-full h-full object-cover">
+                    </div>
+                    <h3 class="text-2xl font-extrabold text-dark mb-3">Laptop Repair</h3>
+                    <p class="text-slate-500 text-sm leading-relaxed mb-6">Screen, keyboard, battery, charging, SSD upgrade, software, overheating, and performance support.</p>
+                    <a href="contact.html?service=Laptop%20Repair" class="text-primary font-bold">Book Laptop Repair <i class="fa-solid fa-arrow-right ml-2"></i></a>
+                </div>
+
+                <div class="bg-white rounded-[2rem] p-6 shadow-xl border border-slate-100 hover:border-primary transition-all">
+                    <div class="h-56 rounded-2xl overflow-hidden mb-6 bg-slate-100">
+                        <img src="https://images.unsplash.com/photo-1576613109753-27804de2cba8?auto=format&fit=crop&q=80&w=700" alt="Mobile phone repair service" class="w-full h-full object-cover">
+                    </div>
+                    <h3 class="text-2xl font-extrabold text-dark mb-3">Mobile Repair</h3>
+                    <p class="text-slate-500 text-sm leading-relaxed mb-6">Display, battery, charging port, speaker, microphone, camera, software, and water-damage inspection.</p>
+                    <a href="contact.html?service=Mobile%20Phone%20Repair" class="text-primary font-bold">Book Mobile Repair <i class="fa-solid fa-arrow-right ml-2"></i></a>
+                </div>
+
+                <div class="bg-white rounded-[2rem] p-6 shadow-xl border border-slate-100 hover:border-primary transition-all">
+                    <div class="h-56 rounded-2xl overflow-hidden mb-6 bg-slate-100">
+                        <img src="https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?auto=format&fit=crop&q=80&w=700" alt="Tablet and iPad repair service" class="w-full h-full object-cover">
+                    </div>
+                    <h3 class="text-2xl font-extrabold text-dark mb-3">iPad & Tablet Repair</h3>
+                    <p class="text-slate-500 text-sm leading-relaxed mb-6">Touch issues, display replacement, battery service, charging faults, and software troubleshooting.</p>
+                    <a href="contact.html?service=iPad%20Repair" class="text-primary font-bold">Book Tablet Repair <i class="fa-solid fa-arrow-right ml-2"></i></a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Process -->
+        <section class="bg-dark text-white py-20">
+            <div class="max-w-7xl mx-auto px-6 md:px-12">
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                    <div>
+                        <p class="text-primary font-black uppercase tracking-widest text-xs mb-3">How We Work</p>
+                        <h2 class="text-4xl md:text-5xl font-extrabold mb-6">A clear repair process from first contact to handover.</h2>
+                        <p class="text-slate-300 leading-relaxed mb-8">You should not need to guess what is wrong with your device or what the repair will involve. Our process is built to keep you informed.</p>
+                        <a href="contact.html?service=Device%20Diagnosis" class="inline-flex bg-primary text-white px-8 py-4 rounded-full font-black btn-hover transition-all">
+                            Request Diagnosis <i class="fa-solid fa-arrow-right ml-3 mt-1"></i>
+                        </a>
+                    </div>
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
+                        <div class="bg-white/5 border border-white/10 p-7 rounded-3xl">
+                            <span class="text-primary font-black text-3xl">01</span>
+                            <h3 class="text-xl font-black mt-4 mb-2">Tell Us the Issue</h3>
+                            <p class="text-slate-400 text-sm leading-relaxed">Send the device details through contact form, call, or WhatsApp.</p>
+                        </div>
+                        <div class="bg-white/5 border border-white/10 p-7 rounded-3xl">
+                            <span class="text-primary font-black text-3xl">02</span>
+                            <h3 class="text-xl font-black mt-4 mb-2">Device Check</h3>
+                            <p class="text-slate-400 text-sm leading-relaxed">We inspect hardware, software, battery, and visible damage.</p>
+                        </div>
+                        <div class="bg-white/5 border border-white/10 p-7 rounded-3xl">
+                            <span class="text-primary font-black text-3xl">03</span>
+                            <h3 class="text-xl font-black mt-4 mb-2">Repair Approval</h3>
+                            <p class="text-slate-400 text-sm leading-relaxed">You receive the repair option before work begins.</p>
+                        </div>
+                        <div class="bg-white/5 border border-white/10 p-7 rounded-3xl">
+                            <span class="text-primary font-black text-3xl">04</span>
+                            <h3 class="text-xl font-black mt-4 mb-2">Quality Handover</h3>
+                            <p class="text-slate-400 text-sm leading-relaxed">We test the device and explain any warranty support.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Locations and CTA -->
+        <section class="max-w-7xl mx-auto px-6 md:px-12 py-20">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
+                <div>
+                    <p class="text-slate-500 font-bold uppercase tracking-widest text-xs mb-2">Service Area</p>
+                    <h2 class="text-4xl md:text-5xl font-extrabold text-dark mb-6">Serving Doha and nearby Qatar regions</h2>
+                    <p class="text-slate-500 leading-relaxed mb-8">We support customers around Doha, Umm Salal Muhammed, Al Rayyan, Al Wakrah, and nearby areas with repair assistance, device advice, and used laptop guidance.</p>
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                        <div class="flex items-center gap-3 bg-slate-50 p-5 rounded-2xl border border-slate-100"><i class="fa-solid fa-location-dot text-primary"></i><span class="font-bold">Doha Region</span></div>
+                        <div class="flex items-center gap-3 bg-slate-50 p-5 rounded-2xl border border-slate-100"><i class="fa-solid fa-location-dot text-primary"></i><span class="font-bold">Al Rayyan</span></div>
+                        <div class="flex items-center gap-3 bg-slate-50 p-5 rounded-2xl border border-slate-100"><i class="fa-solid fa-location-dot text-primary"></i><span class="font-bold">Al Wakrah</span></div>
+                        <div class="flex items-center gap-3 bg-slate-50 p-5 rounded-2xl border border-slate-100"><i class="fa-solid fa-location-dot text-primary"></i><span class="font-bold">Umm Salal</span></div>
+                    </div>
+                </div>
+                <div class="bg-slate-50 rounded-[3rem] p-10 border border-slate-100">
+                    <div class="w-16 h-16 bg-primary text-white rounded-full flex items-center justify-center text-2xl mb-8">
+                        <i class="fa-solid fa-headset"></i>
+                    </div>
+                    <h3 class="text-3xl font-black text-dark mb-4">Need help with your device today?</h3>
+                    <p class="text-slate-500 leading-relaxed mb-8">Send us the device model and issue. We will guide you with the next best step.</p>
+                    <div class="flex flex-wrap gap-4">
+                        <a href="contact.html" class="bg-primary text-white px-7 py-4 rounded-full font-black btn-hover transition-all">Contact Us</a>
+                        <a href="https://wa.me/97430975205" target="_blank" class="bg-white text-dark px-7 py-4 rounded-full font-black border border-slate-100 hover:border-primary transition-all">WhatsApp</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
 
     <!-- Dark Footer -->
     <footer class="bg-dark text-white pt-20 pb-10">
@@ -183,15 +306,10 @@
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-20">
                 <div>
                     <div class="flex items-center gap-2 mb-8">
-                                <!-- Logo Image -->
-        <img 
-            src="image/logo.png" 
-            alt="INFINOWA Logo" 
-            class="w-20 h-20 object-contain"
-        />
+                        <img src="image/logo.png" alt="INFINOWA Logo" class="w-20 h-20 object-contain" />
                         <span class="font-black text-2xl tracking-tighter uppercase">INFINOWA</span>
                     </div>
-                    <p class="text-slate-400 text-sm leading-relaxed mb-8">Your trusted repair partner in Qatar for laptops, mobiles, and tablets. Quality repairs you can depend on.</p>
+                    <p class="text-slate-400 text-sm leading-relaxed mb-8">Your trusted repair partner in Qatar for laptops, mobiles, tablets, and checked used computers.</p>
                     <div class="flex gap-4">
                         <a href="#" class="w-10 h-10 bg-white/5 rounded-full flex items-center justify-center hover:bg-primary transition-all"><i class="fa-brands fa-facebook-f"></i></a>
                         <a href="#" class="w-10 h-10 bg-white/5 rounded-full flex items-center justify-center hover:bg-primary transition-all"><i class="fa-brands fa-instagram"></i></a>
