@@ -138,6 +138,9 @@ textarea:focus {
 .used-card ul {
   flex: 1;
 }
+.hidden-laptop {
+  display: none;
+}
 
 [class*="-mr-16"][class*="blur-3xl"] {
   display: none;
@@ -204,6 +207,7 @@ textarea:focus {
   .space-y-8 > :not([hidden]) ~ :not([hidden]) {
     margin-top: 1.5rem !important;
   }
+  
 
   .p-12,
   .md\:p-12,
@@ -282,6 +286,9 @@ textarea:focus {
   .used-card ul {
     grid-template-columns: 1fr !important;
   }
+  .hidden-laptop {
+    display: none;
+}
 
   #usedGrid {
     gap: 1.25rem !important;
