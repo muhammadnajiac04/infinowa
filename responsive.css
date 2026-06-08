@@ -192,16 +192,7 @@ textarea:focus {
     padding-top: 3.5rem !important;
     padding-bottom: 3.5rem !important;
   }
-main .grid.grid-cols-2.gap-4 {
-    grid-template-columns: 1fr !important;
-    height: auto !important;
-}
 
-main .grid.grid-cols-2.gap-4 img {
-    width: 100% !important;
-    height: 220px !important;
-    object-fit: cover !important;
-}
   main {
     padding-top: 2.5rem !important;
     padding-bottom: 3.5rem !important;
