@@ -173,6 +173,10 @@ textarea:focus {
 }
 
 @media (max-width: 767px) {
+    .hero-buttons {
+      justify-content: center !important;
+      text-align: center !important;
+  }
   header img[alt*="Logo"] {
     width: 3rem !important;
     height: 3rem !important;
