@@ -361,3 +361,57 @@
     setupUsedLaptopPage();
   });
 })();
+document.addEventListener("DOMContentLoaded", () => {
+  const modal = document.getElementById("serviceModal");
+  const modalBox = modal.querySelector(".transform");
+  const closeModalBtn = document.getElementById("closeModal");
+  
+  const modalImage = document.getElementById("modalImage");
+  const modalTitle = document.getElementById("modalTitle");
+  const modalDesc = document.getElementById("modalDesc");
+
+  // Open Modal function
+  const openModal = (card) => {
+    // Read parameters dynamically from clicked elements
+    const imgSrc = card.getAttribute("data-img");
+    const titleText = card.getAttribute("data-title");
+    const descText = card.getAttribute("data-desc");
+
+    // Assign data to modal nodes
+    modalImage.src = imgSrc;
+    modalTitle.textContent = titleText;
+    modalDesc.textContent = descText;
+
+    // Trigger visual transitions safely via class changes
+    modal.classList.remove("opacity-0", "pointer-events-none");
+    modalBox.classList.remove("scale-95");
+    modalBox.classList.add("scale-100");
+    document.body.style.overflow = "hidden"; // Prevents background body scrolling
+  };
+
+  // Close Modal function
+  const closeModal = () => {
+    modal.classList.add("opacity-0", "pointer-events-none");
+    modalBox.classList.remove("scale-100");
+    modalBox.classList.add("scale-95");
+    document.body.style.overflow = ""; // Restores background scrolling
+  };
+
+  // Attach event listeners to all card click instances
+  document.querySelectorAll(".service-card").forEach((card) => {
+    card.addEventListener("click", () => openModal(card));
+  });
+
+  // Structural closing actions (clicking button or mask background area)
+  closeModalBtn.addEventListener("click", closeModal);
+  modal.addEventListener("click", (e) => {
+    if (e.target === modal) closeModal();
+  });
+
+  // Keyboard accessibility feature (close via Escape button click)
+  document.addEventListener("keydown", (e) => {
+    if (e.key === "Escape" && !modal.classList.contains("opacity-0")) {
+      closeModal();
+    }
+  });
+});

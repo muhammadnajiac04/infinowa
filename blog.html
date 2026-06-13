@@ -1,0 +1,629 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog | INFINOWA - Tech Tips & Repair Guides</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" href="image/logo.png">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#4F46E5',
+                        dark: '#111827',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body { font-family: 'Inter', sans-serif; color: #111827; scroll-behavior: smooth; }
+        .btn-hover:hover { filter: brightness(1.1); transform: translateY(-1px); }
+        .card-hover { transition: all 0.3s ease; }
+        .card-hover:hover { transform: translateY(-6px); box-shadow: 0 20px 60px rgba(79,70,229,0.12); }
+        .tag { display: inline-block; padding: 4px 14px; border-radius: 999px; font-size: 11px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; }
+        .hero-gradient { background: linear-gradient(135deg, #f8f8ff 0%, #eef2ff 100%); }
+        .featured-img { object-fit: cover; transition: transform 0.5s ease; }
+        .card-hover:hover .featured-img { transform: scale(1.04); }
+        .search-bar:focus { outline: none; box-shadow: 0 0 0 3px rgba(79,70,229,0.15); }
+        .sidebar-card { border: 1px solid #f1f5f9; border-radius: 1.5rem; padding: 1.5rem; background: #fff; }
+        .pagination-btn { width: 40px; height: 40px; display: flex; align-items: center; justify-content: center; border-radius: 50%; font-weight: 700; font-size: 14px; transition: all 0.2s; }
+        .pagination-btn:hover { background: #4F46E5; color: #fff; }
+        .pagination-btn.active { background: #4F46E5; color: #fff; }
+    </style>
+</head>
+<body class="bg-white overflow-x-hidden">
+
+    <!-- Navigation -->
+    <header class="w-full py-4 px-6 md:px-12 flex items-center justify-between bg-white sticky top-0 z-50 shadow-sm">
+        <div class="flex items-center">
+            <div class="flex items-center gap-2">
+                <img src="image/logo.png" alt="INFINOWA Logo" class="w-16 h-16 object-contain">
+                <div class="flex flex-col">
+                    <h1 class="font-[Poppins] text-[42px] font-semibold tracking-[-1px] text-slate-900 leading-none">infofix</h1>
+                    <p class="font-[Poppins] text-xs text-slate-500 mt-1">Powered by Infinowa Trading & Services W.L.L.</p>
+                </div>
+            </div>
+        </div>
+        <nav class="hidden lg:flex items-center space-x-8 font-semibold text-sm uppercase text-slate-600">
+            <a href="index.html" class="hover:text-primary transition-colors">Home</a>
+            <a href="about.html" class="hover:text-primary transition-colors">About Us</a>
+            <div class="relative group cursor-pointer">
+                <span class="hover:text-primary transition-colors">Repairs <i class="fa-solid fa-chevron-down text-[10px] ml-1"></i></span>
+            </div>
+            <a href="used.html" class="hover:text-primary transition-colors">Used</a>
+            <a href="blog.html" class="text-primary transition-colors border-b-2 border-primary pb-0.5">Blogs</a>
+            <a href="contact.html" class="hover:text-primary transition-colors">Contact Us</a>
+        </nav>
+        <div class="flex items-center space-x-4">
+            <button class="bg-primary text-white px-6 py-2.5 rounded-full font-bold text-sm btn-hover transition-all flex items-center shadow-lg shadow-indigo-100">
+                Repair My Device <i class="fa-solid fa-arrow-right ml-2 text-xs"></i>
+            </button>
+            <div class="hidden sm:flex items-center space-x-3 text-xs font-bold border-l pl-4">
+                <div class="flex flex-col items-center cursor-pointer">
+                    <img src="https://flagcdn.com/w20/gb.png" alt="English" class="w-5 h-3 object-cover rounded-sm">
+                    <span class="mt-1 text-dark">en</span>
+                </div>
+                <div class="flex flex-col items-center cursor-pointer opacity-40">
+                    <img src="https://flagcdn.com/w20/qa.png" alt="Arabic" class="w-5 h-3 object-cover rounded-sm">
+                    <span class="mt-1 text-dark">ar</span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero / Page Header -->
+    <section class="hero-gradient py-16 px-6 md:px-12 border-b border-slate-100">
+        <div class="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-8">
+            <div>
+                <p class="text-slate-500 font-bold uppercase tracking-widest text-xs mb-3 flex items-center gap-2">
+                    <i class="fa-solid fa-pen-nib text-primary"></i> Insights & Guides
+                </p>
+                <h1 class="text-5xl md:text-6xl font-extrabold leading-tight text-dark mb-4">
+                    Tech Tips &amp; <span class="text-primary">Repair</span> Guides
+                </h1>
+                <p class="text-slate-500 text-lg max-w-xl">
+                    Expert advice on device maintenance, troubleshooting, and getting the most out of your tech — straight from the INFINOWA workshop.
+                </p>
+            </div>
+            <!-- Search -->
+            <div class="w-full md:w-96">
+                <div class="relative">
+                    <i class="fa-solid fa-magnifying-glass absolute left-5 top-1/2 -translate-y-1/2 text-slate-400"></i>
+                    <input type="text" placeholder="Search articles..." class="search-bar w-full pl-12 pr-6 py-4 rounded-full border border-slate-200 bg-white text-sm font-medium shadow-sm">
+                </div>
+                <!-- Category Pills -->
+                <div class="flex flex-wrap gap-2 mt-4">
+                    <button onclick="filterPosts('all')" class="filter-btn tag bg-primary text-white" data-cat="all">All</button>
+                    <button onclick="filterPosts('laptop')" class="filter-btn tag bg-slate-100 text-slate-600 hover:bg-indigo-50 hover:text-primary transition-colors" data-cat="laptop">Laptops</button>
+                    <button onclick="filterPosts('mac')" class="filter-btn tag bg-slate-100 text-slate-600 hover:bg-indigo-50 hover:text-primary transition-colors" data-cat="mac">Mac</button>
+                    <button onclick="filterPosts('pcb')" class="filter-btn tag bg-slate-100 text-slate-600 hover:bg-indigo-50 hover:text-primary transition-colors" data-cat="pcb">PCB & Industrial</button>
+                    <button onclick="filterPosts('data')" class="filter-btn tag bg-slate-100 text-slate-600 hover:bg-indigo-50 hover:text-primary transition-colors" data-cat="data">Data Recovery</button>
+                    <button onclick="filterPosts('gaming')" class="filter-btn tag bg-slate-100 text-slate-600 hover:bg-indigo-50 hover:text-primary transition-colors" data-cat="gaming">Gaming</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Post -->
+    <section class="max-w-7xl mx-auto px-6 md:px-12 py-14">
+        <p class="text-slate-500 font-bold uppercase tracking-widest text-xs mb-6 flex items-center gap-2">
+            <i class="fa-solid fa-bookmark text-primary"></i> Featured Article
+        </p>
+        <div class="card-hover rounded-[2.5rem] overflow-hidden border border-slate-100 bg-white shadow-xl flex flex-col lg:flex-row cursor-pointer" onclick="openPost('Signs Your Laptop Needs a Professional Repair (And What to Do Next)')">
+            <div class="w-full lg:w-1/2 h-72 lg:h-auto overflow-hidden">
+                <img src="https://images.unsplash.com/photo-1603302576837-37561b2e2302?auto=format&fit=crop&q=80&w=900" alt="Laptop repair" class="featured-img w-full h-full">
+            </div>
+            <div class="w-full lg:w-1/2 p-10 md:p-14 flex flex-col justify-center">
+                <div class="flex items-center gap-3 mb-5">
+                    <span class="tag bg-indigo-100 text-primary">Laptops</span>
+                    <span class="text-slate-400 text-xs font-medium">June 10, 2025 · 6 min read</span>
+                </div>
+                <h2 class="text-3xl md:text-4xl font-extrabold text-dark leading-tight mb-5">
+                    Signs Your Laptop Needs a Professional Repair (And What to Do Next)
+                </h2>
+                <p class="text-slate-500 leading-relaxed mb-8">
+                    Is your laptop running hot, crashing unexpectedly, or displaying a flickering screen? These are warning signals most people ignore until it's too late. Learn the 7 most common signs your device needs expert attention — and how INFINOWA can help.
+                </p>
+                <div class="flex items-center justify-between">
+                    <div class="flex items-center gap-3">
+                        <div class="w-10 h-10 bg-indigo-100 rounded-full flex items-center justify-center text-primary font-bold text-sm">AK</div>
+                        <div>
+                            <p class="font-bold text-dark text-sm">Ahmed Khalid</p>
+                            <p class="text-slate-400 text-xs">Lead Technician, INFINOWA</p>
+                        </div>
+                    </div>
+                    <a class="text-primary font-bold flex items-center gap-2 hover:gap-4 transition-all text-sm">
+                        Read Article <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Blog Grid + Sidebar -->
+    <section class="max-w-7xl mx-auto px-6 md:px-12 pb-20">
+        <div class="flex flex-col lg:flex-row gap-10">
+
+            <!-- Posts Grid -->
+            <div class="flex-1">
+                <p class="text-slate-500 font-bold uppercase tracking-widest text-xs mb-8 flex items-center gap-2">
+                    <i class="fa-solid fa-newspaper text-primary"></i> Latest Articles
+                </p>
+                <div id="postsGrid" class="grid grid-cols-1 md:grid-cols-2 gap-8">
+
+                    <!-- Post 1 -->
+                    <div class="card-hover bg-white rounded-[2rem] border border-slate-100 overflow-hidden shadow-sm cursor-pointer" data-cat="mac" onclick="openPost('MacBook Running Slow? Here\'s What\'s Really Happening')">
+                        <div class="h-52 overflow-hidden bg-slate-100">
+                            <img src="https://images.unsplash.com/photo-1517336714731-489689fd1ca8?auto=format&fit=crop&q=80&w=700" class="featured-img w-full h-full">
+                        </div>
+                        <div class="p-7">
+                            <div class="flex items-center gap-3 mb-3">
+                                <span class="tag bg-purple-50 text-purple-700">Mac</span>
+                                <span class="text-slate-400 text-xs">May 28, 2025 · 5 min</span>
+                            </div>
+                            <h3 class="font-extrabold text-dark text-xl leading-snug mb-3">MacBook Running Slow? Here's What's Really Happening</h3>
+                            <p class="text-slate-500 text-sm leading-relaxed mb-5">Thermal throttling, failing SSDs, and bloated startup items are the hidden culprits. We break down the diagnosis process our technicians use every day.</p>
+                            <div class="flex items-center justify-between">
+                                <div class="flex items-center gap-2">
+                                    <div class="w-8 h-8 bg-purple-100 rounded-full flex items-center justify-center text-purple-700 font-bold text-xs">SR</div>
+                                    <span class="text-xs text-slate-500 font-medium">Sara Rahman</span>
+                                </div>
+                                <span class="text-primary text-xs font-bold flex items-center gap-1">Read <i class="fa-solid fa-arrow-right text-[10px]"></i></span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Post 2 -->
+                    <div class="card-hover bg-white rounded-[2rem] border border-slate-100 overflow-hidden shadow-sm cursor-pointer" data-cat="data" onclick="openPost('What to Do Immediately After Liquid Damage to Your Laptop')">
+                        <div class="h-52 overflow-hidden bg-slate-100">
+                            <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?auto=format&fit=crop&q=80&w=700" class="featured-img w-full h-full">
+                        </div>
+                        <div class="p-7">
+                            <div class="flex items-center gap-3 mb-3">
+                                <span class="tag bg-blue-50 text-blue-700">Data Recovery</span>
+                                <span class="text-slate-400 text-xs">May 15, 2025 · 4 min</span>
+                            </div>
+                            <h3 class="font-extrabold text-dark text-xl leading-snug mb-3">What to Do Immediately After Liquid Damage to Your Laptop</h3>
+                            <p class="text-slate-500 text-sm leading-relaxed mb-5">The first 60 seconds matter most. This step-by-step emergency guide could be the difference between a full recovery and a complete write-off.</p>
+                            <div class="flex items-center justify-between">
+                                <div class="flex items-center gap-2">
+                                    <div class="w-8 h-8 bg-blue-100 rounded-full flex items-center justify-center text-blue-700 font-bold text-xs">MJ</div>
+                                    <span class="text-xs text-slate-500 font-medium">Majid J.</span>
+                                </div>
+                                <span class="text-primary text-xs font-bold flex items-center gap-1">Read <i class="fa-solid fa-arrow-right text-[10px]"></i></span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Post 3 -->
+                    <div class="card-hover bg-white rounded-[2rem] border border-slate-100 overflow-hidden shadow-sm cursor-pointer" data-cat="pcb" onclick="openPost('Understanding PCB Failures: A Visual Guide for Non-Engineers')">
+                        <div class="h-52 overflow-hidden bg-slate-100">
+                            <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&q=80&w=700" class="featured-img w-full h-full">
+                        </div>
+                        <div class="p-7">
+                            <div class="flex items-center gap-3 mb-3">
+                                <span class="tag bg-amber-50 text-amber-700">PCB & Industrial</span>
+                                <span class="text-slate-400 text-xs">May 2, 2025 · 7 min</span>
+                            </div>
+                            <h3 class="font-extrabold text-dark text-xl leading-snug mb-3">Understanding PCB Failures: A Visual Guide for Non-Engineers</h3>
+                            <p class="text-slate-500 text-sm leading-relaxed mb-5">Burnt traces, bulging capacitors, cold solder joints — learn to identify the most common PCB failure modes before your industrial equipment goes offline.</p>
+                            <div class="flex items-center justify-between">
+                                <div class="flex items-center gap-2">
+                                    <div class="w-8 h-8 bg-amber-100 rounded-full flex items-center justify-center text-amber-700 font-bold text-xs">FH</div>
+                                    <span class="text-xs text-slate-500 font-medium">Fahad H.</span>
+                                </div>
+                                <span class="text-primary text-xs font-bold flex items-center gap-1">Read <i class="fa-solid fa-arrow-right text-[10px]"></i></span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Post 4 -->
+                    <div class="card-hover bg-white rounded-[2rem] border border-slate-100 overflow-hidden shadow-sm cursor-pointer" data-cat="gaming" onclick="openPost('Gaming PC Build vs Upgrade: Which Makes More Sense in 2025?')">
+                        <div class="h-52 overflow-hidden bg-slate-100">
+                            <img src="https://images.unsplash.com/photo-1593640408182-31c228e23a87?auto=format&fit=crop&q=80&w=700" class="featured-img w-full h-full">
+                        </div>
+                        <div class="p-7">
+                            <div class="flex items-center gap-3 mb-3">
+                                <span class="tag bg-green-50 text-green-700">Gaming</span>
+                                <span class="text-slate-400 text-xs">Apr 19, 2025 · 8 min</span>
+                            </div>
+                            <h3 class="font-extrabold text-dark text-xl leading-snug mb-3">Gaming PC Build vs Upgrade: Which Makes More Sense in 2025?</h3>
+                            <p class="text-slate-500 text-sm leading-relaxed mb-5">GPU prices have shifted dramatically. We compare full builds against strategic upgrades — with real cost breakdowns from our Qatar customers.</p>
+                            <div class="flex items-center justify-between">
+                                <div class="flex items-center gap-2">
+                                    <div class="w-8 h-8 bg-green-100 rounded-full flex items-center justify-center text-green-700 font-bold text-xs">AK</div>
+                                    <span class="text-xs text-slate-500 font-medium">Ahmed Khalid</span>
+                                </div>
+                                <span class="text-primary text-xs font-bold flex items-center gap-1">Read <i class="fa-solid fa-arrow-right text-[10px]"></i></span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Post 5 -->
+                    <div class="card-hover bg-white rounded-[2rem] border border-slate-100 overflow-hidden shadow-sm cursor-pointer" data-cat="laptop" onclick="openPost('How to Extend Your Laptop Battery Life: 10 Proven Tips')">
+                        <div class="h-52 overflow-hidden bg-slate-100">
+                            <img src="https://images.unsplash.com/photo-1496181133206-80ce9b88a853?auto=format&fit=crop&q=80&w=700" class="featured-img w-full h-full">
+                        </div>
+                        <div class="p-7">
+                            <div class="flex items-center gap-3 mb-3">
+                                <span class="tag bg-indigo-100 text-primary">Laptops</span>
+                                <span class="text-slate-400 text-xs">Apr 5, 2025 · 5 min</span>
+                            </div>
+                            <h3 class="font-extrabold text-dark text-xl leading-snug mb-3">How to Extend Your Laptop Battery Life: 10 Proven Tips</h3>
+                            <p class="text-slate-500 text-sm leading-relaxed mb-5">From power plan settings to thermal management, here are the habits that keep batteries healthy longer — and when it's time to replace yours.</p>
+                            <div class="flex items-center justify-between">
+                                <div class="flex items-center gap-2">
+                                    <div class="w-8 h-8 bg-indigo-100 rounded-full flex items-center justify-center text-primary font-bold text-xs">SR</div>
+                                    <span class="text-xs text-slate-500 font-medium">Sara Rahman</span>
+                                </div>
+                                <span class="text-primary text-xs font-bold flex items-center gap-1">Read <i class="fa-solid fa-arrow-right text-[10px]"></i></span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Post 6 -->
+                    <div class="card-hover bg-white rounded-[2rem] border border-slate-100 overflow-hidden shadow-sm cursor-pointer" data-cat="data" onclick="openPost('Hard Drive vs SSD Failure: How to Recover Your Data')">
+                        <div class="h-52 overflow-hidden bg-slate-100">
+                            <img src="https://images.unsplash.com/photo-1563988435-a3f52e0e0cd6?auto=format&fit=crop&q=80&w=700" class="featured-img w-full h-full">
+                        </div>
+                        <div class="p-7">
+                            <div class="flex items-center gap-3 mb-3">
+                                <span class="tag bg-blue-50 text-blue-700">Data Recovery</span>
+                                <span class="text-slate-400 text-xs">Mar 22, 2025 · 6 min</span>
+                            </div>
+                            <h3 class="font-extrabold text-dark text-xl leading-snug mb-3">Hard Drive vs SSD Failure: How to Recover Your Data</h3>
+                            <p class="text-slate-500 text-sm leading-relaxed mb-5">Mechanical drives and solid-state drives fail differently. Understanding which one you have — and how it failed — is the first step toward recovery.</p>
+                            <div class="flex items-center justify-between">
+                                <div class="flex items-center gap-2">
+                                    <div class="w-8 h-8 bg-blue-100 rounded-full flex items-center justify-center text-blue-700 font-bold text-xs">MJ</div>
+                                    <span class="text-xs text-slate-500 font-medium">Majid J.</span>
+                                </div>
+                                <span class="text-primary text-xs font-bold flex items-center gap-1">Read <i class="fa-solid fa-arrow-right text-[10px]"></i></span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Post 7 -->
+                    <div class="card-hover bg-white rounded-[2rem] border border-slate-100 overflow-hidden shadow-sm cursor-pointer" data-cat="pcb" onclick="openPost('PLC Systems Explained: What They Do and Why They Fail')">
+                        <div class="h-52 overflow-hidden bg-slate-100">
+                            <img src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&q=80&w=700" class="featured-img w-full h-full">
+                        </div>
+                        <div class="p-7">
+                            <div class="flex items-center gap-3 mb-3">
+                                <span class="tag bg-amber-50 text-amber-700">PCB & Industrial</span>
+                                <span class="text-slate-400 text-xs">Mar 10, 2025 · 9 min</span>
+                            </div>
+                            <h3 class="font-extrabold text-dark text-xl leading-snug mb-3">PLC Systems Explained: What They Do and Why They Fail</h3>
+                            <p class="text-slate-500 text-sm leading-relaxed mb-5">Programmable logic controllers keep factories running. When they go down, everything stops. Learn the failure patterns INFINOWA sees most in Qatar's industrial sector.</p>
+                            <div class="flex items-center justify-between">
+                                <div class="flex items-center gap-2">
+                                    <div class="w-8 h-8 bg-amber-100 rounded-full flex items-center justify-center text-amber-700 font-bold text-xs">FH</div>
+                                    <span class="text-xs text-slate-500 font-medium">Fahad H.</span>
+                                </div>
+                                <span class="text-primary text-xs font-bold flex items-center gap-1">Read <i class="fa-solid fa-arrow-right text-[10px]"></i></span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Post 8 -->
+                    <div class="card-hover bg-white rounded-[2rem] border border-slate-100 overflow-hidden shadow-sm cursor-pointer" data-cat="mac" onclick="openPost('Logic Board Repair vs Replacement: The Real Cost Breakdown')">
+                        <div class="h-52 overflow-hidden bg-slate-100">
+                            <img src="https://images.unsplash.com/photo-1611532736597-de2d4265fba3?auto=format&fit=crop&q=80&w=700" class="featured-img w-full h-full">
+                        </div>
+                        <div class="p-7">
+                            <div class="flex items-center gap-3 mb-3">
+                                <span class="tag bg-purple-50 text-purple-700">Mac</span>
+                                <span class="text-slate-400 text-xs">Feb 27, 2025 · 5 min</span>
+                            </div>
+                            <h3 class="font-extrabold text-dark text-xl leading-snug mb-3">Logic Board Repair vs Replacement: The Real Cost Breakdown</h3>
+                            <p class="text-slate-500 text-sm leading-relaxed mb-5">Apple's official quote for logic board replacement is often 3–5× the actual repair cost. We explain when a targeted micro-solder fix is the smarter choice.</p>
+                            <div class="flex items-center justify-between">
+                                <div class="flex items-center gap-2">
+                                    <div class="w-8 h-8 bg-purple-100 rounded-full flex items-center justify-center text-purple-700 font-bold text-xs">SR</div>
+                                    <span class="text-xs text-slate-500 font-medium">Sara Rahman</span>
+                                </div>
+                                <span class="text-primary text-xs font-bold flex items-center gap-1">Read <i class="fa-solid fa-arrow-right text-[10px]"></i></span>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- Pagination -->
+                <div class="flex items-center justify-center gap-2 mt-14">
+                    <button class="pagination-btn text-slate-400 hover:bg-indigo-50 hover:text-primary">
+                        <i class="fa-solid fa-chevron-left text-xs"></i>
+                    </button>
+                    <button class="pagination-btn active">1</button>
+                    <button class="pagination-btn text-slate-600 hover:bg-slate-50">2</button>
+                    <button class="pagination-btn text-slate-600 hover:bg-slate-50">3</button>
+                    <span class="text-slate-400 text-sm px-2">…</span>
+                    <button class="pagination-btn text-slate-600 hover:bg-slate-50">8</button>
+                    <button class="pagination-btn text-slate-400 hover:bg-indigo-50 hover:text-primary">
+                        <i class="fa-solid fa-chevron-right text-xs"></i>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Sidebar -->
+            <aside class="w-full lg:w-80 shrink-0 space-y-8">
+
+                <!-- Book Repair CTA -->
+                <div class="bg-dark rounded-[2rem] p-8 text-white relative overflow-hidden">
+                    <div class="absolute -right-8 -bottom-8 text-white/5 text-[10rem] pointer-events-none">
+                        <i class="fa-solid fa-screwdriver-wrench"></i>
+                    </div>
+                    <div class="w-12 h-12 bg-primary rounded-2xl flex items-center justify-center text-white text-xl mb-6 shadow-lg shadow-indigo-900/40">
+                        <i class="fa-solid fa-bolt"></i>
+                    </div>
+                    <h3 class="text-xl font-extrabold mb-3 leading-snug">Need a Repair Right Now?</h3>
+                    <p class="text-slate-400 text-sm mb-6 leading-relaxed">Most repairs done in 24–48 hours. Free diagnosis included.</p>
+                    <a href="tel:+97471028090" class="block text-center bg-primary text-white px-6 py-3 rounded-full font-bold text-sm btn-hover transition-all shadow-lg shadow-indigo-900/30">
+                        Call +974 7102 8090
+                    </a>
+                </div>
+
+                <!-- Popular Posts -->
+                <div class="sidebar-card">
+                    <h3 class="font-extrabold text-dark text-lg mb-6 flex items-center gap-2">
+                        <i class="fa-solid fa-fire text-primary"></i> Popular Articles
+                    </h3>
+                    <div class="space-y-5">
+                        <div class="flex gap-4 cursor-pointer group" onclick="openPost('Signs Your Laptop Needs a Professional Repair')">
+                            <div class="w-16 h-16 rounded-xl overflow-hidden shrink-0 bg-slate-100">
+                                <img src="https://images.unsplash.com/photo-1603302576837-37561b2e2302?auto=format&fit=crop&q=80&w=200" class="w-full h-full object-cover group-hover:scale-105 transition">
+                            </div>
+                            <div>
+                                <p class="font-bold text-dark text-sm group-hover:text-primary transition-colors leading-snug">Signs Your Laptop Needs a Professional Repair</p>
+                                <p class="text-xs text-slate-400 mt-1">June 10, 2025</p>
+                            </div>
+                        </div>
+                        <div class="flex gap-4 cursor-pointer group" onclick="openPost('MacBook Running Slow?')">
+                            <div class="w-16 h-16 rounded-xl overflow-hidden shrink-0 bg-slate-100">
+                                <img src="https://images.unsplash.com/photo-1517336714731-489689fd1ca8?auto=format&fit=crop&q=80&w=200" class="w-full h-full object-cover group-hover:scale-105 transition">
+                            </div>
+                            <div>
+                                <p class="font-bold text-dark text-sm group-hover:text-primary transition-colors leading-snug">MacBook Running Slow? Here's What's Happening</p>
+                                <p class="text-xs text-slate-400 mt-1">May 28, 2025</p>
+                            </div>
+                        </div>
+                        <div class="flex gap-4 cursor-pointer group" onclick="openPost('Hard Drive vs SSD Failure')">
+                            <div class="w-16 h-16 rounded-xl overflow-hidden shrink-0 bg-slate-100">
+                                <img src="https://images.unsplash.com/photo-1563988435-a3f52e0e0cd6?auto=format&fit=crop&q=80&w=200" class="w-full h-full object-cover group-hover:scale-105 transition">
+                            </div>
+                            <div>
+                                <p class="font-bold text-dark text-sm group-hover:text-primary transition-colors leading-snug">Hard Drive vs SSD Failure: Data Recovery Guide</p>
+                                <p class="text-xs text-slate-400 mt-1">Mar 22, 2025</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Categories -->
+                <div class="sidebar-card">
+                    <h3 class="font-extrabold text-dark text-lg mb-5 flex items-center gap-2">
+                        <i class="fa-solid fa-tags text-primary"></i> Categories
+                    </h3>
+                    <div class="space-y-3">
+                        <button onclick="filterPosts('laptop')" class="flex items-center justify-between w-full group hover:text-primary transition-colors text-sm font-medium text-slate-600 p-2 rounded-xl hover:bg-indigo-50">
+                            <span><i class="fa-solid fa-laptop mr-2 text-slate-400 group-hover:text-primary"></i> Laptops & Desktops</span>
+                            <span class="bg-slate-100 text-slate-500 text-xs px-2.5 py-0.5 rounded-full group-hover:bg-indigo-100 group-hover:text-primary">12</span>
+                        </button>
+                        <button onclick="filterPosts('mac')" class="flex items-center justify-between w-full group hover:text-primary transition-colors text-sm font-medium text-slate-600 p-2 rounded-xl hover:bg-indigo-50">
+                            <span><i class="fa-brands fa-apple mr-2 text-slate-400 group-hover:text-primary"></i> Mac Repairs</span>
+                            <span class="bg-slate-100 text-slate-500 text-xs px-2.5 py-0.5 rounded-full group-hover:bg-indigo-100 group-hover:text-primary">8</span>
+                        </button>
+                        <button onclick="filterPosts('pcb')" class="flex items-center justify-between w-full group hover:text-primary transition-colors text-sm font-medium text-slate-600 p-2 rounded-xl hover:bg-indigo-50">
+                            <span><i class="fa-solid fa-microchip mr-2 text-slate-400 group-hover:text-primary"></i> PCB & Industrial</span>
+                            <span class="bg-slate-100 text-slate-500 text-xs px-2.5 py-0.5 rounded-full group-hover:bg-indigo-100 group-hover:text-primary">6</span>
+                        </button>
+                        <button onclick="filterPosts('data')" class="flex items-center justify-between w-full group hover:text-primary transition-colors text-sm font-medium text-slate-600 p-2 rounded-xl hover:bg-indigo-50">
+                            <span><i class="fa-solid fa-database mr-2 text-slate-400 group-hover:text-primary"></i> Data Recovery</span>
+                            <span class="bg-slate-100 text-slate-500 text-xs px-2.5 py-0.5 rounded-full group-hover:bg-indigo-100 group-hover:text-primary">9</span>
+                        </button>
+                        <button onclick="filterPosts('gaming')" class="flex items-center justify-between w-full group hover:text-primary transition-colors text-sm font-medium text-slate-600 p-2 rounded-xl hover:bg-indigo-50">
+                            <span><i class="fa-solid fa-gamepad mr-2 text-slate-400 group-hover:text-primary"></i> Gaming</span>
+                            <span class="bg-slate-100 text-slate-500 text-xs px-2.5 py-0.5 rounded-full group-hover:bg-indigo-100 group-hover:text-primary">5</span>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Newsletter -->
+                <div class="bg-indigo-50 rounded-[2rem] p-8 border border-indigo-100">
+                    <div class="w-12 h-12 bg-primary rounded-2xl flex items-center justify-center text-white text-xl mb-5 shadow-lg shadow-indigo-200">
+                        <i class="fa-solid fa-envelope"></i>
+                    </div>
+                    <h3 class="font-extrabold text-dark text-lg mb-2">Get Repair Tips by Email</h3>
+                    <p class="text-slate-500 text-sm mb-5 leading-relaxed">Weekly guides, maintenance reminders, and exclusive offers for our Qatar customers.</p>
+                    <input type="email" placeholder="Your email address" class="w-full px-5 py-3 rounded-full border border-indigo-200 bg-white text-sm mb-3 focus:outline-none focus:ring-2 focus:ring-primary/30">
+                    <button class="w-full bg-primary text-white py-3 rounded-full font-bold text-sm btn-hover transition-all shadow-md shadow-indigo-200">
+                        Subscribe Free <i class="fa-solid fa-arrow-right ml-2 text-xs"></i>
+                    </button>
+                </div>
+
+                <!-- Tags Cloud -->
+                <div class="sidebar-card">
+                    <h3 class="font-extrabold text-dark text-lg mb-5">Tags</h3>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="tag bg-slate-100 text-slate-600 cursor-pointer hover:bg-indigo-100 hover:text-primary transition-colors">#laptop</span>
+                        <span class="tag bg-slate-100 text-slate-600 cursor-pointer hover:bg-indigo-100 hover:text-primary transition-colors">#apple</span>
+                        <span class="tag bg-slate-100 text-slate-600 cursor-pointer hover:bg-indigo-100 hover:text-primary transition-colors">#pcb</span>
+                        <span class="tag bg-slate-100 text-slate-600 cursor-pointer hover:bg-indigo-100 hover:text-primary transition-colors">#data-recovery</span>
+                        <span class="tag bg-slate-100 text-slate-600 cursor-pointer hover:bg-indigo-100 hover:text-primary transition-colors">#gaming</span>
+                        <span class="tag bg-slate-100 text-slate-600 cursor-pointer hover:bg-indigo-100 hover:text-primary transition-colors">#macbook</span>
+                        <span class="tag bg-slate-100 text-slate-600 cursor-pointer hover:bg-indigo-100 hover:text-primary transition-colors">#battery</span>
+                        <span class="tag bg-slate-100 text-slate-600 cursor-pointer hover:bg-indigo-100 hover:text-primary transition-colors">#doha</span>
+                        <span class="tag bg-slate-100 text-slate-600 cursor-pointer hover:bg-indigo-100 hover:text-primary transition-colors">#plc</span>
+                        <span class="tag bg-slate-100 text-slate-600 cursor-pointer hover:bg-indigo-100 hover:text-primary transition-colors">#water-damage</span>
+                        <span class="tag bg-slate-100 text-slate-600 cursor-pointer hover:bg-indigo-100 hover:text-primary transition-colors">#ssd</span>
+                        <span class="tag bg-slate-100 text-slate-600 cursor-pointer hover:bg-indigo-100 hover:text-primary transition-colors">#qatar</span>
+                    </div>
+                </div>
+            </aside>
+        </div>
+    </section>
+
+    <!-- CTA Banner -->
+    <section class="max-w-7xl mx-auto px-6 md:px-12 pb-20">
+        <div class="bg-dark rounded-[3rem] p-12 md:p-16 relative overflow-hidden flex flex-col md:flex-row justify-between items-center gap-10">
+            <img src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&q=80&w=1200" class="absolute inset-0 w-full h-full object-cover opacity-10">
+            <div class="relative z-10">
+                <p class="text-indigo-400 font-bold uppercase tracking-widest text-xs mb-3">Expert Help · Doha, Qatar</p>
+                <h2 class="text-4xl font-extrabold text-white mb-4 leading-tight">Still have a question?<br>Talk to our team.</h2>
+                <p class="text-slate-400 max-w-md leading-relaxed">We're at the Sofitel Complex, Doha — or reach us by phone and WhatsApp 7 days a week from 8am to 9pm.</p>
+            </div>
+            <div class="flex flex-col sm:flex-row gap-4 relative z-10">
+                <a href="tel:+97471028090" class="flex items-center gap-3 bg-primary text-white px-8 py-4 rounded-full font-bold btn-hover transition-all shadow-lg shadow-indigo-900/40">
+                    <i class="fa-solid fa-phone"></i> Call Now
+                </a>
+                <a href="https://wa.me/+97471028090" target="_blank" class="flex items-center gap-3 bg-[#25D366] text-white px-8 py-4 rounded-full font-bold btn-hover transition-all">
+                    <i class="fa-brands fa-whatsapp text-lg"></i> WhatsApp
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Dark Footer -->
+    <footer class="bg-dark text-white pt-20 pb-10">
+        <div class="max-w-7xl mx-auto px-6 md:px-12">
+            <div class="flex flex-col md:flex-row justify-between items-start md:items-center border-b border-white/10 pb-12 mb-12 gap-8">
+                <div class="flex items-center gap-6">
+                    <div class="w-14 h-14 bg-primary rounded-full flex items-center justify-center text-2xl"><i class="fa-solid fa-headset"></i></div>
+                    <div><p class="text-xl font-bold">Need Any Support For Your Device?</p></div>
+                </div>
+                <div class="flex items-center gap-4">
+                    <div class="w-12 h-12 bg-primary/20 rounded-full flex items-center justify-center text-primary"><i class="fa-brands fa-whatsapp text-2xl"></i></div>
+                    <div>
+                        <p class="text-slate-400 text-xs font-bold uppercase">WhatsApp Us</p>
+                        <p class="text-lg font-black">+974 7102 8090</p>
+                    </div>
+                </div>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-20">
+                <div>
+                    <div class="flex items-center gap-2 mb-8">
+                        <img src="image/logo.png" alt="INFINOWA Logo" class="w-20 h-20 object-contain">
+                        <span class="font-black text-2xl tracking-tighter uppercase">INFINOWA</span>
+                    </div>
+                    <p class="text-slate-400 text-sm leading-relaxed mb-8">Your trusted repair partner in Qatar for laptops, mobiles, and tablets. Quality repairs you can depend on.</p>
+                    <div class="flex gap-4">
+                        <a href="#" class="w-10 h-10 bg-white/5 rounded-full flex items-center justify-center hover:bg-primary transition-all"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="#" class="w-10 h-10 bg-white/5 rounded-full flex items-center justify-center hover:bg-primary transition-all"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="#" class="w-10 h-10 bg-white/5 rounded-full flex items-center justify-center hover:bg-primary transition-all"><i class="fa-brands fa-x-twitter"></i></a>
+                        <a href="#" class="w-10 h-10 bg-white/5 rounded-full flex items-center justify-center hover:bg-primary transition-all"><i class="fa-brands fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                <div>
+                    <h4 class="text-xl font-bold mb-8">Services</h4>
+                    <ul class="space-y-4 text-slate-400 text-sm">
+                        <li class="flex items-center gap-2 hover:text-primary cursor-pointer"><i class="fa-solid fa-check text-primary text-[10px]"></i> Laptop repair</li>
+                        <li class="flex items-center gap-2 hover:text-primary cursor-pointer"><i class="fa-solid fa-check text-primary text-[10px]"></i> MacBook repair</li>
+                        <li class="flex items-center gap-2 hover:text-primary cursor-pointer"><i class="fa-solid fa-check text-primary text-[10px]"></i> PCB repairs</li>
+                        <li class="flex items-center gap-2 hover:text-primary cursor-pointer"><i class="fa-solid fa-check text-primary text-[10px]"></i> Data recovery</li>
+                        <li class="flex items-center gap-2 hover:text-primary cursor-pointer"><i class="fa-solid fa-check text-primary text-[10px]"></i> Gaming PCs</li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-xl font-bold mb-8">Blog</h4>
+                    <ul class="space-y-4 text-slate-400 text-sm">
+                        <li class="hover:text-primary cursor-pointer">Laptop Guides</li>
+                        <li class="hover:text-primary cursor-pointer">Mac Tips</li>
+                        <li class="hover:text-primary cursor-pointer">PCB & Industrial</li>
+                        <li class="hover:text-primary cursor-pointer">Data Recovery</li>
+                        <li class="hover:text-primary cursor-pointer">Gaming</li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-xl font-bold mb-8">Useful Links</h4>
+                    <ul class="space-y-4 text-slate-400 text-sm">
+                        <li class="hover:text-primary cursor-pointer">About us</li>
+                        <li class="hover:text-primary cursor-pointer">Laptop Repair Qatar</li>
+                        <li class="hover:text-primary cursor-pointer">Contact us</li>
+                        <li class="hover:text-primary cursor-pointer">Privacy Policy</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="flex flex-col md:flex-row justify-between items-center pt-10 border-t border-white/5 text-slate-500 text-xs">
+                <p>INFINOWA 2025 | All Rights Reserved</p>
+                <p class="hover:text-white cursor-pointer mt-4 md:mt-0">Contact Us</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Floating Buttons -->
+    <div class="fixed bottom-6 left-6 z-50">
+        <a href="https://wa.me/+97471028090" target="_blank" class="w-14 h-14 bg-[#25D366] text-white rounded-full flex items-center justify-center shadow-2xl hover:scale-110 transition-transform">
+            <i class="fa-brands fa-whatsapp text-3xl"></i>
+        </a>
+    </div>
+    <div class="fixed bottom-6 right-6 z-50">
+        <a href="tel:+97471028090" class="w-14 h-14 bg-primary text-white rounded-full flex items-center justify-center shadow-2xl hover:scale-110 transition-transform">
+            <i class="fa-solid fa-phone text-2xl"></i>
+        </a>
+    </div>
+
+    <!-- Article Modal -->
+    <div id="articleModal" class="fixed inset-0 z-[100] flex items-center justify-center p-4 bg-black/60 backdrop-blur-sm opacity-0 pointer-events-none transition-opacity duration-300">
+        <div class="bg-white rounded-[2rem] max-w-2xl w-full shadow-2xl max-h-[90vh] overflow-y-auto">
+            <div class="p-10">
+                <button onclick="closeArticleModal()" class="mb-6 w-10 h-10 bg-slate-100 hover:bg-slate-200 rounded-full flex items-center justify-center text-slate-500 transition-colors">
+                    <i class="fa-solid fa-xmark"></i>
+                </button>
+                <span class="tag bg-indigo-100 text-primary mb-4 inline-block">Article Preview</span>
+                <h2 id="modalArticleTitle" class="text-2xl font-extrabold text-dark mb-4 leading-tight"></h2>
+                <p class="text-slate-500 leading-relaxed mb-6">This article is part of the INFINOWA repair guides series. Full articles are published on our website — stay tuned for the complete blog system launch.</p>
+                <div class="bg-indigo-50 rounded-2xl p-6 border border-indigo-100">
+                    <p class="text-sm text-slate-600 mb-4 font-medium">Have a repair issue you'd like us to write about?</p>
+                    <a href="tel:+97471028090" class="inline-flex items-center gap-2 bg-primary text-white px-6 py-3 rounded-full font-bold text-sm btn-hover">
+                        Talk to our team <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function filterPosts(cat) {
+            const cards = document.querySelectorAll('#postsGrid > div[data-cat]');
+            const buttons = document.querySelectorAll('.filter-btn');
+            buttons.forEach(b => {
+                b.classList.remove('bg-primary','text-white');
+                b.classList.add('bg-slate-100','text-slate-600');
+            });
+            const activeBtn = document.querySelector(`.filter-btn[data-cat="${cat}"]`);
+            if (activeBtn) {
+                activeBtn.classList.add('bg-primary','text-white');
+                activeBtn.classList.remove('bg-slate-100','text-slate-600');
+            }
+            cards.forEach(card => {
+                if (cat === 'all' || card.dataset.cat === cat) {
+                    card.style.display = '';
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+        }
+
+        function openPost(title) {
+            document.getElementById('modalArticleTitle').textContent = title;
+            const modal = document.getElementById('articleModal');
+            modal.classList.remove('opacity-0','pointer-events-none');
+        }
+
+        function closeArticleModal() {
+            const modal = document.getElementById('articleModal');
+            modal.classList.add('opacity-0','pointer-events-none');
+        }
+
+        document.getElementById('articleModal').addEventListener('click', function(e) {
+            if (e.target === this) closeArticleModal();
+        });
+    </script>
+</body>
+</html>
