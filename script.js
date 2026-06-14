@@ -415,3 +415,16 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
 });
+function openModal(title, desc, image) {
+    document.getElementById("modalTitle").textContent = title;
+    document.getElementById("modalDesc").textContent = desc;
+    document.getElementById("modalImg").src = image;
+
+    document.getElementById("serviceModal")
+        .classList.remove("hidden");
+}
+
+function closeModal() {
+    document.getElementById("serviceModal")
+        .classList.add("hidden");
+}
