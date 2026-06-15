@@ -149,9 +149,9 @@ z-[9999]`; menu.innerHTML = `
                      class="w-16 h-16 object-contain">
 
                 <div>
-                    <h4 class="font-bold text-lg">
-                        PlayStation
-                    </h4>
+                    <h4 class="font-bold text-sm">
+    PlayStation
+</h4>
 
                     <span class="text-primary text-sm">
                         Learn More
