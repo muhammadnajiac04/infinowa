@@ -92,12 +92,129 @@
       if ($(".repairs-menu", item)) return;
       item.classList.add("relative");
       const menu = document.createElement("div");
-      menu.className = "repairs-menu invisible opacity-0 translate-y-2 absolute top-full left-0 mt-4 w-64 bg-white rounded-3xl shadow-2xl border border-slate-100 p-3 transition-all z-50";
-      menu.innerHTML = `
-        <a href="contact.html?service=Laptop%20Repair" class="block px-4 py-3 rounded-2xl hover:bg-indigo-50 hover:text-primary">Laptop Repair</a>
-        <a href="contact.html?service=Mobile%20Phone%20Repair" class="block px-4 py-3 rounded-2xl hover:bg-indigo-50 hover:text-primary">Mobile Phone Repair</a>
-        <a href="contact.html?service=iPad%20Repair" class="block px-4 py-3 rounded-2xl hover:bg-indigo-50 hover:text-primary">iPad Repair</a>
-      `;
+      menu.className =
+`repairs-menu
+fixed
+top-[90px]
+left-1/2
+-translate-x-1/2
+w-[90vw]
+max-w-7xl
+bg-white
+rounded-[2rem]
+shadow-2xl
+border
+border-slate-100
+invisible
+opacity-0
+translate-y-2
+transition-all
+duration-300
+z-[9999]`; menu.innerHTML = `
+<div class="p-6">
+
+    <!-- Tabs -->
+    <!--<div class="flex gap-10 border-b border-slate-200 pb-4">
+        <button class="text-primary font-semibold border-b-2 border-primary pb-2">
+            Qatar
+        </button>
+
+        <button class="text-slate-500 font-semibold pb-2">
+            Doha
+        </button>
+    </div>-->
+
+    <div class="grid grid-cols-6 mt-6">
+
+        <!-- Left Column -->
+        <div class="col-span-1 border-r border-slate-200">
+
+            <a href="#" class="flex items-center gap-4 p-4 hover:bg-slate-50">
+                <img src="image/laptops.jpg"
+                     class="w-16 h-16 object-contain">
+
+                <div>
+                    <h4 class="font-bold text-lg">
+                        Laptops
+                    </h4>
+
+                    <span class="text-primary text-sm">
+                        Learn More
+                    </span>
+                </div>
+            </a>
+
+            <a href="#" class="flex items-center gap-4 p-4 hover:bg-slate-50">
+                <img src="image/playstation.jpg"
+                     class="w-16 h-16 object-contain">
+
+                <div>
+                    <h4 class="font-bold text-lg">
+                        PlayStation
+                    </h4>
+
+                    <span class="text-primary text-sm">
+                        Learn More
+                    </span>
+                </div>
+            </a>
+
+        </div>
+
+        <!-- Brand Grid -->
+        <div class="col-span-5 grid grid-cols-5">
+
+            <a href="#" class="p-8 border-r border-b flex items-center gap-3 hover:bg-slate-50">
+                <img src="image/dell.jpg" class="w-14">
+                <span class="font-medium">DELL</span>
+            </a>
+
+            <a href="#" class="p-8 border-r border-b flex items-center gap-3 hover:bg-slate-50">
+                <img src="image/hp.jpg" class="w-14">
+                <span class="font-medium">HP</span>
+            </a>
+
+            <a href="#" class="p-8 border-r border-b flex items-center gap-3 hover:bg-slate-50">
+                <img src="image/asus.png" class="w-14">
+                <span class="font-medium">ASUS</span>
+            </a>
+
+            <a href="#" class="p-8 border-r border-b flex items-center gap-3 hover:bg-slate-50">
+                <img src="image/surface.png" class="w-14">
+                <span class="font-medium">SURFACE PRO</span>
+            </a>
+
+            <a href="#" class="p-8 border-b flex items-center gap-3 hover:bg-slate-50">
+                <img src="image/lenovo.png" class="w-14">
+                <span class="font-medium">LENOVO</span>
+            </a>
+
+            <a href="#" class="p-8 border-r flex items-center gap-3 hover:bg-slate-50">
+                <img src="image/mac.png" class="w-14">
+                <span class="font-medium">APPLE</span>
+            </a>
+
+            <a href="#" class="p-8 border-r flex items-center gap-3 hover:bg-slate-50">
+                <img src="image/acer.png" class="w-14">
+                <span class="font-medium">ACER</span>
+            </a>
+
+            <a href="#" class="p-8 border-r flex items-center gap-3 hover:bg-slate-50">
+                <img src="image/msi.png" class="w-14">
+                <span class="font-medium">MSI</span>
+            </a>
+
+            <a href="#" class="p-8 flex items-center gap-3 hover:bg-slate-50">
+                <img src="image/mac.png" class="w-14">
+                <span class="font-medium">IMAC</span>
+            </a>
+
+        </div>
+
+    </div>
+
+</div>
+`;
       item.appendChild(menu);
 
       item.addEventListener("mouseenter", () => menu.classList.remove("invisible", "opacity-0", "translate-y-2"));
