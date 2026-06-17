@@ -214,256 +214,202 @@
     </div>
 
     <!-- Carousel Wrapper -->
-    <div class="overflow-hidden relative" id="carouselWrapper">
-        <!-- Fade edges -->
-        <div class="pointer-events-none absolute left-0 top-0 bottom-0 w-16 z-10"
-             style="background: linear-gradient(to right, white, transparent);"></div>
+    <div class="relative" id="carouselOuter">
+        <div id="fadeLeft" class="pointer-events-none absolute left-0 top-0 bottom-0 w-16 z-10"
+             style="background: linear-gradient(to right, white, transparent); opacity: 0; transition: opacity 0.2s;"></div>
         <div class="pointer-events-none absolute right-0 top-0 bottom-0 w-16 z-10"
              style="background: linear-gradient(to left, white, transparent);"></div>
 
-        <!-- Track -->
-        <div class="flex gap-6" id="carouselTrack"
-             style="width: max-content; animation: scrollLeft 35s linear infinite;">
+        <div id="carouselTrack">
 
-            <!-- ===== CARD SET (duplicated below for seamless loop) ===== -->
-
-            <!-- Laptop & Desktop Repair Card -->
-            <div class="bg-white rounded-[2rem] p-6 shadow-xl border border-slate-100 group hover:border-primary transition-all cursor-pointer flex-shrink-0 w-80">
-                <div class="h-48 rounded-2xl overflow-hidden mb-6 bg-slate-100">
-                    <img src="image/lapr.jpg?auto=format&fit=crop&q=80&w=600"
-                         class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
-                </div>
-                <h3 class="text-xl font-extrabold text-dark mb-3">Laptop & Desktop Repair Services</h3>
-                <p class="text-slate-500 text-sm leading-relaxed mb-5">Professional diagnosis and repair services for laptops and desktop computers, including upgrades, hardware replacement, and performance optimization.</p>
-                <a href="#" class="text-primary font-bold flex items-center gap-2 hover:gap-4 transition-all">
-                    Explore Service <i class="fa-solid fa-arrow-right"></i>
-                </a>
+            <div class="svc-card">
+                <div class="svc-img"><img src="image/lapr.jpg" alt="Laptop repair"></div>
+                <h3>Laptop & Desktop Repair Services</h3>
+                <p>Professional diagnosis and repair services for laptops and desktop computers, including upgrades, hardware replacement, and performance optimization.</p>
+                <a href="#">Explore Service <i class="fa-solid fa-arrow-right"></i></a>
             </div>
 
-            <!-- Mac Repair Card -->
-            <div class="bg-white rounded-[2rem] p-6 shadow-xl border border-slate-100 group hover:border-primary transition-all cursor-pointer flex-shrink-0 w-80">
-                <div class="h-48 rounded-2xl overflow-hidden mb-6 bg-slate-100">
-                    <img src="image/mac3.jpg?auto=format&fit=crop&q=80&w=600"
-                         class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
-                </div>
-                <h3 class="text-xl font-extrabold text-dark mb-3">MacBook, iMac & Mac Pro Repairs</h3>
-                <p class="text-slate-500 text-sm leading-relaxed mb-5">Specialized repair solutions for Apple devices including screen replacement, logic board repair, battery replacement, and software troubleshooting.</p>
-                <a href="#" class="text-primary font-bold flex items-center gap-2 hover:gap-4 transition-all">
-                    Explore Service <i class="fa-solid fa-arrow-right"></i>
-                </a>
+            <div class="svc-card">
+                <div class="svc-img"><img src="image/mac3.jpg" alt="Mac repair"></div>
+                <h3>MacBook, iMac & Mac Pro Repairs</h3>
+                <p>Specialized repair solutions for Apple devices including screen replacement, logic board repair, battery replacement, and software troubleshooting.</p>
+                <a href="#">Explore Service <i class="fa-solid fa-arrow-right"></i></a>
             </div>
 
-            <!-- Gaming PC Card -->
-            <div class="bg-white rounded-[2rem] p-6 shadow-xl border border-slate-100 group hover:border-primary transition-all cursor-pointer flex-shrink-0 w-80">
-                <div class="h-48 rounded-2xl overflow-hidden mb-6 bg-slate-100">
-                    <img src="image/game7.jpg?auto=format&fit=crop&q=80&w=600"
-                         class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
-                </div>
-                <h3 class="text-xl font-extrabold text-dark mb-3">Gaming PC Customization & Upgrades</h3>
-                <p class="text-slate-500 text-sm leading-relaxed mb-5">Build, repair, and upgrade gaming PCs and professional workstations with high-performance components tailored to your needs.</p>
-                <a href="#" class="text-primary font-bold flex items-center gap-2 hover:gap-4 transition-all">
-                    Explore Service <i class="fa-solid fa-arrow-right"></i>
-                </a>
+            <div class="svc-card">
+                <div class="svc-img"><img src="image/game7.jpg" alt="Gaming PC"></div>
+                <h3>Gaming PC Customization & Upgrades</h3>
+                <p>Build, repair, and upgrade gaming PCs and professional workstations with high-performance components tailored to your needs.</p>
+                <a href="#">Explore Service <i class="fa-solid fa-arrow-right"></i></a>
             </div>
 
-            <!-- Barrier Controller Card -->
-            <div class="bg-white rounded-[2rem] p-6 shadow-xl border border-slate-100 group hover:border-primary transition-all cursor-pointer flex-shrink-0 w-80">
-                <div class="h-48 rounded-2xl overflow-hidden mb-6 bg-slate-100">
-                    <img src="image/barrier.jpg?auto=format&fit=crop&q=80&w=600"
-                         class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
-                </div>
-                <h3 class="text-xl font-extrabold text-dark mb-3">Barrier & Access Controller Repairs</h3>
-                <p class="text-slate-500 text-sm leading-relaxed mb-5">Expert repair services for barriers, speed gates, bollards, and access controller motherboards used in commercial environments.</p>
-                <a href="#" class="text-primary font-bold flex items-center gap-2 hover:gap-4 transition-all">
-                    Explore Service <i class="fa-solid fa-arrow-right"></i>
-                </a>
+            <div class="svc-card">
+                <div class="svc-img"><img src="image/barrier.jpg" alt="Barrier repair"></div>
+                <h3>Barrier & Access Controller Repairs</h3>
+                <p>Expert repair services for barriers, speed gates, bollards, and access controller motherboards used in commercial environments.</p>
+                <a href="#">Explore Service <i class="fa-solid fa-arrow-right"></i></a>
             </div>
 
-            <!-- PCB Repair Card -->
-            <div class="bg-white rounded-[2rem] p-6 shadow-xl border border-slate-100 group hover:border-primary transition-all cursor-pointer flex-shrink-0 w-80">
-                <div class="h-48 rounded-2xl overflow-hidden mb-6 bg-slate-100">
-                    <img src="image/pcbcomp.jpg?auto=format&fit=crop&q=80&w=600"
-                         class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
-                </div>
-                <h3 class="text-xl font-extrabold text-dark mb-3">PCB Component Repairs</h3>
-                <p class="text-slate-500 text-sm leading-relaxed mb-5">Repair and restoration of critical PCB components and specialized motherboards for industrial and electronic systems.</p>
-                <a href="#" class="text-primary font-bold flex items-center gap-2 hover:gap-4 transition-all">
-                    Explore Service <i class="fa-solid fa-arrow-right"></i>
-                </a>
+            <div class="svc-card">
+                <div class="svc-img"><img src="image/pcbcomp.jpg" alt="PCB repair"></div>
+                <h3>PCB Component Repairs</h3>
+                <p>Repair and restoration of critical PCB components and specialized motherboards for industrial and electronic systems.</p>
+                <a href="#">Explore Service <i class="fa-solid fa-arrow-right"></i></a>
             </div>
 
-            <!-- PLC Repair Card -->
-            <div class="bg-white rounded-[2rem] p-6 shadow-xl border border-slate-100 group hover:border-primary transition-all cursor-pointer flex-shrink-0 w-80">
-                <div class="h-48 rounded-2xl overflow-hidden mb-6 bg-slate-100">
-                    <img src="image/plcindustry.png?auto=format&fit=crop&q=80&w=600"
-                         class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
-                </div>
-                <h3 class="text-xl font-extrabold text-dark mb-3">PLC & Industrial Controller Repairs</h3>
-                <p class="text-slate-500 text-sm leading-relaxed mb-5">Expert diagnosis and repair of PLC systems and industrial controllers to minimize downtime and ensure reliable operation.</p>
-                <a href="#" class="text-primary font-bold flex items-center gap-2 hover:gap-4 transition-all">
-                    Explore Service <i class="fa-solid fa-arrow-right"></i>
-                </a>
+            <div class="svc-card">
+                <div class="svc-img"><img src="image/plcindustry.png" alt="PLC repair"></div>
+                <h3>PLC & Industrial Controller Repairs</h3>
+                <p>Expert diagnosis and repair of PLC systems and industrial controllers to minimize downtime and ensure reliable operation.</p>
+                <a href="#">Explore Service <i class="fa-solid fa-arrow-right"></i></a>
             </div>
 
-            <!-- Elevator Controller Card -->
-            <div class="bg-white rounded-[2rem] p-6 shadow-xl border border-slate-100 group hover:border-primary transition-all cursor-pointer flex-shrink-0 w-80">
-                <div class="h-48 rounded-2xl overflow-hidden mb-6 bg-slate-100">
-                    <img src="image/elavator.jpg?auto=format&fit=crop&q=80&w=600"
-                         class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
-                </div>
-                <h3 class="text-xl font-extrabold text-dark mb-3">Elevator & Lift Controller Repairs</h3>
-                <p class="text-slate-500 text-sm leading-relaxed mb-5">Professional repair services for elevator and lift controller boards used in residential and commercial buildings.</p>
-                <a href="#" class="text-primary font-bold flex items-center gap-2 hover:gap-4 transition-all">
-                    Explore Service <i class="fa-solid fa-arrow-right"></i>
-                </a>
+            <div class="svc-card">
+                <div class="svc-img"><img src="image/elavator.jpg" alt="Elevator repair"></div>
+                <h3>Elevator & Lift Controller Repairs</h3>
+                <p>Professional repair services for elevator and lift controller boards used in residential and commercial buildings.</p>
+                <a href="#">Explore Service <i class="fa-solid fa-arrow-right"></i></a>
             </div>
 
-            <!-- Building Automation Card -->
-            <div class="bg-white rounded-[2rem] p-6 shadow-xl border border-slate-100 group hover:border-primary transition-all cursor-pointer flex-shrink-0 w-80">
-                <div class="h-48 rounded-2xl overflow-hidden mb-6 bg-slate-100">
-                    <img src="image/pcbauto.png?auto=format&fit=crop&q=80&w=600"
-                         class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
-                </div>
-                <h3 class="text-xl font-extrabold text-dark mb-3">Building Automation PCB Repairs</h3>
-                <p class="text-slate-500 text-sm leading-relaxed mb-5">Comprehensive repair solutions for building automation systems, control boards, and electronic management units.</p>
-                <a href="#" class="text-primary font-bold flex items-center gap-2 hover:gap-4 transition-all">
-                    Explore Service <i class="fa-solid fa-arrow-right"></i>
-                </a>
+            <div class="svc-card">
+                <div class="svc-img"><img src="image/pcbauto.png" alt="Building automation"></div>
+                <h3>Building Automation PCB Repairs</h3>
+                <p>Comprehensive repair solutions for building automation systems, control boards, and electronic management units.</p>
+                <a href="#">Explore Service <i class="fa-solid fa-arrow-right"></i></a>
             </div>
 
-            <!-- Data Recovery Card -->
-            <div class="bg-white rounded-[2rem] p-6 shadow-xl border border-slate-100 group hover:border-primary transition-all cursor-pointer flex-shrink-0 w-80">
-                <div class="h-48 rounded-2xl overflow-hidden mb-6 bg-slate-100">
-                    <img src="image/recovery2.jpg?auto=format&fit=crop&q=80&w=600"
-                         class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
-                </div>
-                <h3 class="text-xl font-extrabold text-dark mb-3">Data Recovery Services</h3>
-                <p class="text-slate-500 text-sm leading-relaxed mb-5">Recover valuable files, photos, and business data from damaged hard drives, SSDs, USB drives, and memory cards.</p>
-                <a href="#" class="text-primary font-bold flex items-center gap-2 hover:gap-4 transition-all">
-                    Explore Service <i class="fa-solid fa-arrow-right"></i>
-                </a>
+            <div class="svc-card">
+                <div class="svc-img"><img src="image/recovery2.jpg" alt="Data recovery"></div>
+                <h3>Data Recovery Services</h3>
+                <p>Recover valuable files, photos, and business data from damaged hard drives, SSDs, USB drives, and memory cards.</p>
+                <a href="#">Explore Service <i class="fa-solid fa-arrow-right"></i></a>
             </div>
 
-            <!-- Electronic Spare Parts Card -->
-            <div class="bg-white rounded-[2rem] p-6 shadow-xl border border-slate-100 group hover:border-primary transition-all cursor-pointer flex-shrink-0 w-80">
-                <div class="h-48 rounded-2xl overflow-hidden mb-6 bg-slate-100">
-                    <img src="image/spare.png?auto=format&fit=crop&q=80&w=600"
-                         class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
-                </div>
-                <h3 class="text-xl font-extrabold text-dark mb-3">Electronic Spare Parts & PCB Distribution</h3>
-                <p class="text-slate-500 text-sm leading-relaxed mb-5">Supply and distribution of electronic spare parts, PCB components, and specialized motherboards for industrial applications.</p>
-                <a href="#" class="text-primary font-bold flex items-center gap-2 hover:gap-4 transition-all">
-                    Explore Service <i class="fa-solid fa-arrow-right"></i>
-                </a>
+            <div class="svc-card">
+                <div class="svc-img"><img src="image/spare.png" alt="Electronic parts"></div>
+                <h3>Electronic Spare Parts & PCB Distribution</h3>
+                <p>Supply and distribution of electronic spare parts, PCB components, and specialized motherboards for industrial applications.</p>
+                <a href="#">Explore Service <i class="fa-solid fa-arrow-right"></i></a>
             </div>
 
-            <!-- ===== DUPLICATE SET for seamless infinite loop ===== -->
-
-            <div class="bg-white rounded-[2rem] p-6 shadow-xl border border-slate-100 group hover:border-primary transition-all cursor-pointer flex-shrink-0 w-80">
-                <div class="h-48 rounded-2xl overflow-hidden mb-6 bg-slate-100">
-                    <img src="image/lapr.jpg?auto=format&fit=crop&q=80&w=600" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
-                </div>
-                <h3 class="text-xl font-extrabold text-dark mb-3">Laptop & Desktop Repair Services</h3>
-                <p class="text-slate-500 text-sm leading-relaxed mb-5">Professional diagnosis and repair services for laptops and desktop computers, including upgrades, hardware replacement, and performance optimization.</p>
-                <a href="#" class="text-primary font-bold flex items-center gap-2 hover:gap-4 transition-all">Explore Service <i class="fa-solid fa-arrow-right"></i></a>
-            </div>
-            <div class="bg-white rounded-[2rem] p-6 shadow-xl border border-slate-100 group hover:border-primary transition-all cursor-pointer flex-shrink-0 w-80">
-                <div class="h-48 rounded-2xl overflow-hidden mb-6 bg-slate-100">
-                    <img src="image/mac3.jpg?auto=format&fit=crop&q=80&w=600" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
-                </div>
-                <h3 class="text-xl font-extrabold text-dark mb-3">MacBook, iMac & Mac Pro Repairs</h3>
-                <p class="text-slate-500 text-sm leading-relaxed mb-5">Specialized repair solutions for Apple devices including screen replacement, logic board repair, battery replacement, and software troubleshooting.</p>
-                <a href="#" class="text-primary font-bold flex items-center gap-2 hover:gap-4 transition-all">Explore Service <i class="fa-solid fa-arrow-right"></i></a>
-            </div>
-            <div class="bg-white rounded-[2rem] p-6 shadow-xl border border-slate-100 group hover:border-primary transition-all cursor-pointer flex-shrink-0 w-80">
-                <div class="h-48 rounded-2xl overflow-hidden mb-6 bg-slate-100">
-                    <img src="image/game7.jpg?auto=format&fit=crop&q=80&w=600" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
-                </div>
-                <h3 class="text-xl font-extrabold text-dark mb-3">Gaming PC Customization & Upgrades</h3>
-                <p class="text-slate-500 text-sm leading-relaxed mb-5">Build, repair, and upgrade gaming PCs and professional workstations with high-performance components tailored to your needs.</p>
-                <a href="#" class="text-primary font-bold flex items-center gap-2 hover:gap-4 transition-all">Explore Service <i class="fa-solid fa-arrow-right"></i></a>
-            </div>
-            <div class="bg-white rounded-[2rem] p-6 shadow-xl border border-slate-100 group hover:border-primary transition-all cursor-pointer flex-shrink-0 w-80">
-                <div class="h-48 rounded-2xl overflow-hidden mb-6 bg-slate-100">
-                    <img src="image/barrier.jpg?auto=format&fit=crop&q=80&w=600" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
-                </div>
-                <h3 class="text-xl font-extrabold text-dark mb-3">Barrier & Access Controller Repairs</h3>
-                <p class="text-slate-500 text-sm leading-relaxed mb-5">Expert repair services for barriers, speed gates, bollards, and access controller motherboards used in commercial environments.</p>
-                <a href="#" class="text-primary font-bold flex items-center gap-2 hover:gap-4 transition-all">Explore Service <i class="fa-solid fa-arrow-right"></i></a>
-            </div>
-            <div class="bg-white rounded-[2rem] p-6 shadow-xl border border-slate-100 group hover:border-primary transition-all cursor-pointer flex-shrink-0 w-80">
-                <div class="h-48 rounded-2xl overflow-hidden mb-6 bg-slate-100">
-                    <img src="image/pcbcomp.jpg?auto=format&fit=crop&q=80&w=600" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
-                </div>
-                <h3 class="text-xl font-extrabold text-dark mb-3">PCB Component Repairs</h3>
-                <p class="text-slate-500 text-sm leading-relaxed mb-5">Repair and restoration of critical PCB components and specialized motherboards for industrial and electronic systems.</p>
-                <a href="#" class="text-primary font-bold flex items-center gap-2 hover:gap-4 transition-all">Explore Service <i class="fa-solid fa-arrow-right"></i></a>
-            </div>
-            <div class="bg-white rounded-[2rem] p-6 shadow-xl border border-slate-100 group hover:border-primary transition-all cursor-pointer flex-shrink-0 w-80">
-                <div class="h-48 rounded-2xl overflow-hidden mb-6 bg-slate-100">
-                    <img src="image/plcindustry.png?auto=format&fit=crop&q=80&w=600" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
-                </div>
-                <h3 class="text-xl font-extrabold text-dark mb-3">PLC & Industrial Controller Repairs</h3>
-                <p class="text-slate-500 text-sm leading-relaxed mb-5">Expert diagnosis and repair of PLC systems and industrial controllers to minimize downtime and ensure reliable operation.</p>
-                <a href="#" class="text-primary font-bold flex items-center gap-2 hover:gap-4 transition-all">Explore Service <i class="fa-solid fa-arrow-right"></i></a>
-            </div>
-            <div class="bg-white rounded-[2rem] p-6 shadow-xl border border-slate-100 group hover:border-primary transition-all cursor-pointer flex-shrink-0 w-80">
-                <div class="h-48 rounded-2xl overflow-hidden mb-6 bg-slate-100">
-                    <img src="image/elavator.jpg?auto=format&fit=crop&q=80&w=600" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
-                </div>
-                <h3 class="text-xl font-extrabold text-dark mb-3">Elevator & Lift Controller Repairs</h3>
-                <p class="text-slate-500 text-sm leading-relaxed mb-5">Professional repair services for elevator and lift controller boards used in residential and commercial buildings.</p>
-                <a href="#" class="text-primary font-bold flex items-center gap-2 hover:gap-4 transition-all">Explore Service <i class="fa-solid fa-arrow-right"></i></a>
-            </div>
-            <div class="bg-white rounded-[2rem] p-6 shadow-xl border border-slate-100 group hover:border-primary transition-all cursor-pointer flex-shrink-0 w-80">
-                <div class="h-48 rounded-2xl overflow-hidden mb-6 bg-slate-100">
-                    <img src="image/pcbauto.png?auto=format&fit=crop&q=80&w=600" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
-                </div>
-                <h3 class="text-xl font-extrabold text-dark mb-3">Building Automation PCB Repairs</h3>
-                <p class="text-slate-500 text-sm leading-relaxed mb-5">Comprehensive repair solutions for building automation systems, control boards, and electronic management units.</p>
-                <a href="#" class="text-primary font-bold flex items-center gap-2 hover:gap-4 transition-all">Explore Service <i class="fa-solid fa-arrow-right"></i></a>
-            </div>
-            <div class="bg-white rounded-[2rem] p-6 shadow-xl border border-slate-100 group hover:border-primary transition-all cursor-pointer flex-shrink-0 w-80">
-                <div class="h-48 rounded-2xl overflow-hidden mb-6 bg-slate-100">
-                    <img src="image/recovery2.jpg?auto=format&fit=crop&q=80&w=600" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
-                </div>
-                <h3 class="text-xl font-extrabold text-dark mb-3">Data Recovery Services</h3>
-                <p class="text-slate-500 text-sm leading-relaxed mb-5">Recover valuable files, photos, and business data from damaged hard drives, SSDs, USB drives, and memory cards.</p>
-                <a href="#" class="text-primary font-bold flex items-center gap-2 hover:gap-4 transition-all">Explore Service <i class="fa-solid fa-arrow-right"></i></a>
-            </div>
-            <div class="bg-white rounded-[2rem] p-6 shadow-xl border border-slate-100 group hover:border-primary transition-all cursor-pointer flex-shrink-0 w-80">
-                <div class="h-48 rounded-2xl overflow-hidden mb-6 bg-slate-100">
-                    <img src="image/spare.png?auto=format&fit=crop&q=80&w=600" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
-                </div>
-                <h3 class="text-xl font-extrabold text-dark mb-3">Electronic Spare Parts & PCB Distribution</h3>
-                <p class="text-slate-500 text-sm leading-relaxed mb-5">Supply and distribution of electronic spare parts, PCB components, and specialized motherboards for industrial applications.</p>
-                <a href="#" class="text-primary font-bold flex items-center gap-2 hover:gap-4 transition-all">Explore Service <i class="fa-solid fa-arrow-right"></i></a>
-            </div>
-
-        </div><!-- end track -->
-    </div><!-- end carousel wrapper -->
+        </div>
+    </div>
 </section>
 
-<!-- Carousel Animation + Click-to-toggle -->
 <style>
-@keyframes scrollLeft {
-    0%   { transform: translateX(0); }
-    100% { transform: translateX(-50%); }
-}
-#carouselTrack.paused {
-    animation-play-state: paused;
-}
+    #carouselOuter {
+        cursor: grab;
+        user-select: none;
+    }
+    #carouselOuter:active {
+        cursor: grabbing;
+    }
+    #carouselTrack {
+        display: flex;
+        gap: 20px;
+        overflow-x: scroll;
+        overflow-y: visible;
+        scrollbar-width: none;
+        -webkit-overflow-scrolling: touch;
+        padding-bottom: 8px;
+    }
+    #carouselTrack::-webkit-scrollbar {
+        display: none;
+    }
+    .svc-card {
+        flex: 0 0 calc(25% - 15px);
+        min-width: 0;
+        background: white;
+        border-radius: 2rem;
+        padding: 1.5rem;
+        border: 1.5px solid #F1F5F9;
+        box-shadow: 0 4px 24px rgba(0,0,0,0.07);
+        transition: border-color 0.2s;
+        cursor: pointer;
+    }
+    .svc-card:hover {
+        border-color: #4F46E5;
+    }
+    .svc-img {
+        width: 100%;
+        height: 180px;
+        border-radius: 1rem;
+        overflow: hidden;
+        background: #E5E7EB;
+        margin-bottom: 1.25rem;
+    }
+    .svc-img img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+        transition: transform 0.4s;
+    }
+    .svc-card:hover .svc-img img {
+        transform: scale(1.05);
+    }
+    .svc-card h3 {
+        font-size: 1rem;
+        font-weight: 800;
+        color: #111827;
+        margin-bottom: 0.75rem;
+        line-height: 1.3;
+    }
+    .svc-card p {
+        font-size: 0.8rem;
+        color: #6B7280;
+        line-height: 1.6;
+        margin-bottom: 1rem;
+    }
+    .svc-card a {
+        color: #4F46E5;
+        font-weight: 700;
+        font-size: 0.85rem;
+        text-decoration: none;
+        display: inline-flex;
+        align-items: center;
+        gap: 6px;
+        transition: gap 0.2s;
+    }
+    .svc-card:hover a {
+        gap: 10px;
+    }
 </style>
 
 <script>
-(function () {
-    const track = document.getElementById('carouselTrack');
+    const svcOuter = document.getElementById('carouselOuter');
+    const svcTrack = document.getElementById('carouselTrack');
+    const svcFadeLeft = document.getElementById('fadeLeft');
 
-    // Click anywhere on the track = toggle pause/resume
-    track.addEventListener('click', function () {
-        track.classList.toggle('paused');
+    svcTrack.addEventListener('scroll', function () {
+        svcFadeLeft.style.opacity = svcTrack.scrollLeft > 10 ? '1' : '0';
     });
-})();
+
+    let svcOver = false;
+    svcOuter.addEventListener('mouseenter', () => svcOver = true);
+    svcOuter.addEventListener('mouseleave', () => svcOver = false);
+
+    document.addEventListener('wheel', function (e) {
+        if (!svcOver) return;
+        const atStart = svcTrack.scrollLeft <= 0;
+        const atEnd = svcTrack.scrollLeft + svcTrack.clientWidth >= svcTrack.scrollWidth - 2;
+        if (atStart && e.deltaY < 0) return;
+        if (atEnd && e.deltaY > 0) return;
+        e.preventDefault();
+        svcTrack.scrollLeft += e.deltaY * 1.5;
+    }, { passive: false });
+
+    let svcDrag = false, svcStartX = 0, svcStartScroll = 0;
+    svcOuter.addEventListener('mousedown', e => {
+        svcDrag = true;
+        svcStartX = e.pageX;
+        svcStartScroll = svcTrack.scrollLeft;
+    });
+    document.addEventListener('mousemove', e => {
+        if (!svcDrag) return;
+        svcTrack.scrollLeft = svcStartScroll - (e.pageX - svcStartX);
+    });
+    document.addEventListener('mouseup', () => { svcDrag = false; });
 </script>
 
         <!-- Process -->
