@@ -374,7 +374,7 @@ z-[9999]`; menu.innerHTML = `
       subjectInput.value = selectedService;
     }
 
-    form.addEventListener("submit", (event) => {
+    /*form.addEventListener("submit", (event) => {
       event.preventDefault();
       const fields = $$("input, select, textarea", form);
       const values = fields.map((field) => field.value.trim());
@@ -412,7 +412,42 @@ z-[9999]`; menu.innerHTML = `
         submit.innerHTML = original;
         form.reset();
       }, 700);
-    });
+    });*/
+    form.addEventListener("submit", async function(event){
+
+    event.preventDefault();
+
+    const data = {
+        name: document.getElementById("name").value,
+        deviceBrand: document.getElementById("deviceBrand").value,
+        email: document.getElementById("email").value,
+        phone: document.getElementById("phone").value,
+        subject: document.getElementById("subject").value,
+        message: document.getElementById("message").value
+    };
+
+    try {
+
+        await fetch(
+            "https://script.google.com/macros/s/AKfycbymmVXq2j7VHvkcb6EQikKnMGnYiI-ksX7zF0SLU9EzZkqJhUgVmMeCIhyOq88JEnuaIQ/exec",
+            {
+                method: "POST",
+                mode: "no-cors",
+                body: new URLSearchParams(data)
+            }
+        );
+
+        alert("Message sent successfully!");
+        form.reset();
+
+    } catch(error) {
+
+        alert("Failed to send message.");
+        console.error(error);
+
+    }
+
+});
   }
 
   function setupImageFallbacks() {
@@ -545,3 +580,40 @@ function closeModal() {
     document.getElementById("serviceModal")
         .classList.add("hidden");
 }
+
+/*document.getElementById("contactForm")
+.addEventListener("submit", async function(e){
+
+    e.preventDefault();
+
+    const data = {
+        name: document.getElementById("name").value,
+        deviceBrand: document.getElementById("deviceBrand").value,
+        email: document.getElementById("email").value,
+        phone: document.getElementById("phone").value,
+        subject: document.getElementById("subject").value,
+        message: document.getElementById("message").value
+    };
+
+    try {
+
+        await fetch("https://script.google.com/macros/s/AKfycbymmVXq2j7VHvkcb6EQikKnMGnYiI-ksX7zF0SLU9EzZkqJhUgVmMeCIhyOq88JEnuaIQ/exec", 
+           {
+    method: "POST",
+    mode: "no-cors",
+    body: new URLSearchParams(data)
+  }
+);
+
+        alert("Message sent successfully!");
+        this.reset();
+
+    } catch(error) {
+
+        alert("Failed to send message.");
+        console.error(error);
+
+    }
+
+});
+*/
