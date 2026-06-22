@@ -437,8 +437,8 @@ z-[9999]`; menu.innerHTML = `
             }
         );
 
-        alert("Message sent successfully!");
-        form.reset();
+document.getElementById("successPopup").classList.remove("hidden");
+form.reset();
 
     } catch(error) {
 

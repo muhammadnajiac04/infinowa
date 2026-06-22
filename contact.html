@@ -309,6 +309,42 @@ style="background-image: url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns
         </a>
     </div>
 
+
+
+
+
+    <!-- Success Message -->
+<div id="successPopup"
+     class="fixed inset-0 bg-black/50 flex items-center justify-center z-[9999] hidden">
+
+    <div class="bg-white rounded-[2rem] p-8 max-w-md w-[90%] text-center shadow-2xl">
+
+        <div class="w-20 h-20 mx-auto mb-5 rounded-full bg-green-100 flex items-center justify-center">
+            <i class="fa-solid fa-check text-4xl text-green-600"></i>
+        </div>
+
+        <h3 class="text-2xl font-extrabold text-dark mb-3">
+            Message Sent Successfully
+        </h3>
+
+        <p class="text-slate-500 mb-6">
+            Thank you for contacting INFINOWA. Our team will get back to you shortly.
+        </p>
+
+        <button id="closePopup"
+                class="bg-primary text-white px-8 py-3 rounded-full font-bold hover:opacity-90 transition">
+            OK
+        </button>
+
+    </div>
+
+</div>
+<script>
+document.getElementById("closePopup").addEventListener("click", function() {
+    document.getElementById("successPopup").classList.add("hidden");
+});
+</script>
+
     <script src="script.js"></script>
 
 </body>
