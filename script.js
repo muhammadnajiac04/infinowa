@@ -329,19 +329,39 @@ z-[9999]`; menu.innerHTML = `
 
     const testimonials = [
       {
-        quote: "Excellent service! The team was professional, fast, and the pickup and delivery made the repair very easy.",
-        name: "Shawn Thornhill",
-        role: "Verified Customer",
+        quote: "I had a great experience with this computer service center. The team carefully diagnosed the problem, explained everything in a simple and honest way, and provided a reasonable repair cost before starting the work. I highly recommend this service center to anyone looking for trustworthy computer, laptop, or PCB repair services. A dependable team that delivers quality work and great customer satisfaction.",
+        name: "Javier Saba | Illusionist",
+        role: "Highly Recommended!",
       },
       {
-        quote: "My laptop battery was replaced quickly and the staff explained everything clearly before starting the repair.",
-        name: "Amina Hassan",
-        role: "Laptop Repair Customer",
+        quote: "I thought my laptop was completely dead after a liquid spill, and other shops in Doha told me I had to replace the entire motherboard, which was costing almost the price of a new machine. Luckily, I brought it here. They did an incredible job with chip-level troubleshooting, found the exact short circuit on the PCB, and repaired it for a fraction of the cost. Excellent technical expertise,transparent pricing, and they saved all my data. Easily the best chip-level service center in Qatar!",
+        name: "Jester Javierto  ",
+        role: "Highly Recommended Laptop service center in Qatar !",
       },
       {
-        quote: "They fixed my phone screen the same day. The service felt honest, affordable, and careful.",
-        name: "Mohammed Ali",
-        role: "Mobile Repair Customer",
+        quote: "Amazing experience! While most places just offer to replace parts, these guys actually repair them at the component level. They fixed my dead motherboard perfectly. If you have a laptop, PC, or PCB issue, don't waste time elsewhere—highly recommended for their skill and honesty!",
+        name: "Ismail Paleri",
+        role: "The Chip-Level Experts in Qatar!",
+      },
+      {
+        quote: "Very professional throughout, kept us up to date while replacement parts were ordered, and reassured us. Device all repaired now, very quick turnaround, with picking up and delivering back included in a very reasonable price. Excellent service! These guys are fantastic—they are really knowledgeable and the work is immaculate. They arrived in a timely manner, and were really polite and helpful. Absolutely recommend.",
+        name: "United school international ",
+        role: "Top-notch Technical Expertise",
+      },    
+            {
+        quote: "Exceptional Value for Corporate IT Asset Management. As an IT manager, replacing entire logic boards for a fleet of devices is incredibly expensive and wasteful. This team has become our go-to partner in Qatar for component-level diagnostics and repair. They have successfully resolved complex power delivery issues, damaged charging ports, and shorted circuits on our corporate laptops and specialized PCBs. Their chip-level expertise has saved our company significant capital expenditures this year. Exceptional communication and highly professional service.",
+        name: "Cambridge group of schools",
+        role: "Focus on Cost-Savings & Asset Management",
+      },   
+      {
+        quote: "The Reliable Choice for Corporate Infrastructure Support. In our line of work, hardware downtime equals lost revenue. When several of our workstation motherboards failed due to voltage fluctuations, they handled the diagnosis and micro-soldering with absolute precision. What we appreciated most was their strict adherence to data safety protocols and their transparent technical reporting. They provided clear failure analysis notes for our records and delivered the repaired hardware ahead of schedule. A highly dependable B2B partner in Doha.",
+        name: "Qatar international school",
+        role: "Focus on Minimal Downtime & Data Protection",
+      }, 
+      {
+        quote: "Top-Tier Technical Partner for High-Volume Repairs We have been partnering with this service center for bulk IT equipment repair and motherboard-level troubleshooting. Their technicians possess deep technical expertise in PCB tracing, IC replacements, and chip-level debugging. They handle our volume efficiently, offer competitive commercial pricing for corporate accounts, and maintain high repair success rates. For any organization in Qatar looking to extend the lifespan of their IT hardware assets rather than prematurely scrapping them, this team is top-tier.",
+        name: "Riaz P Jamal",
+        role: "Focus on High-Volume/Bulk Repair & AMCs",
       },
     ];
 

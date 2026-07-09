@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>المدونة | INFINOWA - نصائح تقنية وأدلة الإصلاح</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="icon" type="image/png" href="image/logo.png">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#4F46E5',
+                        dark: '#111827',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body { font-family: 'Cairo', sans-serif; color: #111827; scroll-behavior: smooth; }
+        .btn-hover:hover { filter: brightness(1.1); transform: translateY(-1px); }
+        .card-hover { transition: all 0.3s ease; }
+        .card-hover:hover { transform: translateY(-6px); box-shadow: 0 20px 60px rgba(79,70,229,0.12); }
+        .tag { display: inline-block; padding: 4px 14px; border-radius: 999px; font-size: 11px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; }
+        .hero-gradient { background: linear-gradient(135deg, #f8f8ff 0%, #eef2ff 100%); }
+        .featured-img { object-fit: cover; transition: transform 0.5s ease; }
+        .card-hover:hover .featured-img { transform: scale(1.04); }
+        .search-bar:focus { outline: none; box-shadow: 0 0 0 3px rgba(79,70,229,0.15); }
+        .sidebar-card { border: 1px solid #f1f5f9; border-radius: 1.5rem; padding: 1.5rem; background: #fff; }
+        .pagination-btn { width: 40px; height: 40px; display: flex; align-items: center; justify-content: center; border-radius: 50%; font-weight: 700; font-size: 14px; transition: all 0.2s; }
+        .pagination-btn:hover { background: #4F46E5; color: #fff; }
+        .pagination-btn.active { background: #4F46E5; color: #fff; }
+    </style>
+</head>
+<body class="bg-white overflow-x-hidden">
+
+    <header class="w-full py-4 px-6 md:px-12 flex items-center justify-between bg-white sticky top-0 z-50 shadow-sm">
+        <div class="flex items-center">
+            <div class="flex items-center gap-2">
+                <img src="image/logo.png" alt="شعار INFINOWA" class="w-16 h-16 object-contain">
+                <div class="flex flex-col">
+                    <h1 class="font-[Cairo] text-[32px] font-semibold tracking-[-1px] text-slate-900 leading-none">infofix</h1>
+                    <p class="font-[Cairo] text-xs text-slate-500 mt-1">مدعوم من شركة إنفينووا للتجارة والخدمات ذ.م.م</p>
+                </div>
+            </div>
+        </div>
+        <nav class="hidden lg:flex items-center space-x-8 space-x-reverse font-semibold text-sm uppercase text-slate-600">
+            <a href="index.html" class="hover:text-primary transition-colors">الرئيسية</a>
+            <a href="about.html" class="hover:text-primary transition-colors">من نحن</a>
+            <div class="relative group cursor-pointer">
+                <span class="hover:text-primary transition-colors">خدمات الإصلاح <i class="fa-solid fa-chevron-down text-[10px] mr-1"></i></span>
+            </div>
+            <a href="used.html" class="hover:text-primary transition-colors">المستعمل</a>
+            <a href="blog.html" class="text-primary transition-colors border-b-2 border-primary pb-0.5">المدونة</a>
+            <a href="contact.html" class="hover:text-primary transition-colors">اتصل بنا</a>
+        </nav>
+        <div class="flex items-center space-x-4 space-x-reverse">
+            <button class="bg-primary text-white px-6 py-2.5 rounded-full font-bold text-sm btn-hover transition-all flex items-center shadow-lg shadow-indigo-100">
+                أصلح جهازي <i class="fa-solid fa-arrow-left mr-2 text-xs"></i>
+            </button>
+            <div class="hidden sm:flex items-center space-x-3 space-x-reverse text-xs font-bold border-r pr-4">
+                <div class="flex flex-col items-center cursor-pointer opacity-40">
+                    <img src="https://flagcdn.com/w20/gb.png" alt="English" class="w-5 h-3 object-cover rounded-sm">
+                    <span class="mt-1 text-dark">en</span>
+                </div>
+                <div class="flex flex-col items-center cursor-pointer">
+                    <img src="https://flagcdn.com/w20/qa.png" alt="Arabic" class="w-5 h-3 object-cover rounded-sm">
+                    <span class="mt-1 text-dark">ar</span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section class="hero-gradient py-16 px-6 md:px-12 border-b border-slate-100">
+        <div class="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-8">
+            <div>
+                <p class="text-slate-500 font-bold uppercase tracking-widest text-xs mb-3 flex items-center gap-2">
+                    <i class="fa-solid fa-pen-nib text-primary"></i> رؤى وأدلة
+                </p>
+                <h1 class="text-4xl md:text-5xl font-extrabold leading-tight text-dark mb-4">
+                    نصائح تقنية و <span class="text-primary">أدلة</span> إصلاح
+                </h1>
+                <p class="text-slate-500 text-lg max-w-xl">
+                    نصائح الخبراء حول صيانة الأجهزة، استكشاف الأخطاء وإصلاحها، والاستفادة القصوى من أجهزتك — مباشرة من ورشة عمل INFINOWA.
+                </p>
+            </div>
+            <div class="w-full md:w-96">
+                <div class="relative">
+                    <i class="fa-solid fa-magnifying-glass absolute right-5 top-1/2 -translate-y-1/2 text-slate-400"></i>
+                    <input type="text" placeholder="البحث في المقالات..." class="search-bar w-full pr-12 pl-6 py-4 rounded-full border border-slate-200 bg-white text-sm font-medium shadow-sm">
+                </div>
+                <div class="flex flex-wrap gap-2 mt-4">
+                    <button onclick="filterPosts('all')" class="filter-btn tag bg-primary text-white" data-cat="all">الكل</button>
+                    <button onclick="filterPosts('laptop')" class="filter-btn tag bg-slate-100 text-slate-600 hover:bg-indigo-50 hover:text-primary transition-colors" data-cat="laptop">اللابتوب</button>
+                    <button onclick="filterPosts('mac')" class="filter-btn tag bg-slate-100 text-slate-600 hover:bg-indigo-50 hover:text-primary transition-colors" data-cat="mac">الماك</button>
+                    <button onclick="filterPosts('pcb')" class="filter-btn tag bg-slate-100 text-slate-600 hover:bg-indigo-50 hover:text-primary transition-colors" data-cat="pcb">اللوحات الإلكترونية</button>
+                    <button onclick="filterPosts('data')" class="filter-btn tag bg-slate-100 text-slate-600 hover:bg-indigo-50 hover:text-primary transition-colors" data-cat="data">استعادة البيانات</button>
+                    <button onclick="filterPosts('gaming')" class="filter-btn tag bg-slate-100 text-slate-600 hover:bg-indigo-50 hover:text-primary transition-colors" data-cat="gaming">الألعاب</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="max-w-7xl mx-auto px-6 md:px-12 py-14">
+        <p class="text-slate-500 font-bold uppercase tracking-widest text-xs mb-6 flex items-center gap-2">
+            <i class="fa-solid fa-bookmark text-primary"></i> مقال مميز
+        </p>
+        <div class="card-hover rounded-[2.5rem] overflow-hidden border border-slate-100 bg-white shadow-xl flex flex-col lg:flex-row cursor-pointer" onclick="openPost('علامات تدل على أن جهاز اللابتوب الخاص بك يحتاج إلى إصلاح احترافي')">
+            <div class="w-full lg:w-1/2 h-72 lg:h-auto overflow-hidden">
+                <img src="https://images.unsplash.com/photo-1603302576837-37561b2e2302?auto=format&fit=crop&q=80&w=900" alt="إصلاح اللابتوب" class="featured-img w-full h-full">
+            </div>
+            <div class="w-full lg:w-1/2 p-10 md:p-14 flex flex-col justify-center">
+                <div class="flex items-center gap-3 mb-5">
+                    <span class="tag bg-indigo-100 text-primary">اللابتوب</span>
+                    <span class="text-slate-400 text-xs font-medium">10 يونيو 2025 · 6 دقائق قراءة</span>
+                </div>
+                <h2 class="text-3xl md:text-4xl font-extrabold text-dark leading-tight mb-5">
+                    علامات تدل على أن جهاز اللابتوب الخاص بك يحتاج إلى إصلاح احترافي (وماذا تفعل بعد ذلك)
+                </h2>
+                <p class="text-slate-500 leading-relaxed mb-8">
+                    هل جهاز اللابتوب الخاص بك يسخن بشدة، أو يتعطل بشكل غير متوقع، أو تومض شاشته؟ هذه إشارات تحذيرية يتجاهلها معظم الناس حتى فوات الأوان. تعرف على العلامات السبع الأكثر شيوعاً التي تشير إلى أن جهازك يحتاج إلى اهتمام الخبراء — وكيف يمكن لـ INFINOWA المساعدة.
+                </p>
+                <div class="flex items-center justify-between">
+                    <div class="flex items-center gap-3">
+                        <div class="w-10 h-10 bg-indigo-100 rounded-full flex items-center justify-center text-primary font-bold text-sm">أ.خ</div>
+                        <div>
+                            <p class="font-bold text-dark text-sm">أحمد خالد</p>
+                            <p class="text-slate-400 text-xs">كبير الفنيين، INFINOWA</p>
+                        </div>
+                    </div>
+                    <a class="text-primary font-bold flex items-center gap-2 hover:gap-4 transition-all text-sm">
+                        اقرأ المقال <i class="fa-solid fa-arrow-left"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="max-w-7xl mx-auto px-6 md:px-12 pb-20">
+        <div class="flex flex-col lg:flex-row gap-10">
+
+            <div class="flex-1">
+                <p class="text-slate-500 font-bold uppercase tracking-widest text-xs mb-8 flex items-center gap-2">
+                    <i class="fa-solid fa-newspaper text-primary"></i> أحدث المقالات
+                </p>
+                <div id="postsGrid" class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <div class="card-hover bg-white rounded-[2rem] border border-slate-100 overflow-hidden shadow-sm cursor-pointer" data-cat="mac" onclick="openPost('جهاز الماك الخاص بك يعمل ببطء؟ إليك ما يحدث حقاً')">
+                        <div class="h-52 overflow-hidden bg-slate-100">
+                            <img src="https://images.unsplash.com/photo-1517336714731-489689fd1ca8?auto=format&fit=crop&q=80&w=700" class="featured-img w-full h-full">
+                        </div>
+                        <div class="p-7">
+                            <div class="flex items-center gap-3 mb-3">
+                                <span class="tag bg-purple-50 text-purple-700">الماك</span>
+                                <span class="text-slate-400 text-xs">28 مايو 2025 · 5 دقائق</span>
+                            </div>
+                            <h3 class="font-extrabold text-dark text-xl leading-snug mb-3">جهاز الماك الخاص بك يعمل ببطء؟ إليك ما يحدث حقاً</h3>
+                            <p class="text-slate-500 text-sm leading-relaxed mb-5">الاختناق الحراري، أعطال الـ SSD، والبرامج التي تعمل عند البدء هي الجناة الخفيون. نوضح عملية التشخيص التي يستخدمها فنيونا كل يوم.</p>
+                            <div class="flex items-center justify-between">
+                                <div class="flex items-center gap-2">
+                                    <div class="w-8 h-8 bg-purple-100 rounded-full flex items-center justify-center text-purple-700 font-bold text-xs">س.ر</div>
+                                    <span class="text-xs text-slate-500 font-medium">سارة رحمن</span>
+                                </div>
+                                <span class="text-primary text-xs font-bold flex items-center gap-1">قراءة <i class="fa-solid fa-arrow-left text-[10px]"></i></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="flex items-center justify-center gap-2 mt-14">
+                    <button class="pagination-btn text-slate-400 hover:bg-indigo-50 hover:text-primary">
+                        <i class="fa-solid fa-chevron-right text-xs"></i>
+                    </button>
+                    <button class="pagination-btn active">1</button>
+                    <button class="pagination-btn text-slate-600 hover:bg-slate-50">2</button>
+                    <span class="text-slate-400 text-sm px-2">…</span>
+                    <button class="pagination-btn text-slate-400 hover:bg-indigo-50 hover:text-primary">
+                        <i class="fa-solid fa-chevron-left text-xs"></i>
+                    </button>
+                </div>
+            </div>
+
+            <aside class="w-full lg:w-80 shrink-0 space-y-8">
+                <div class="bg-dark rounded-[2rem] p-8 text-white relative overflow-hidden">
+                    <div class="absolute -left-8 -bottom-8 text-white/5 text-[10rem] pointer-events-none">
+                        <i class="fa-solid fa-screwdriver-wrench"></i>
+                    </div>
+                    <div class="w-12 h-12 bg-primary rounded-2xl flex items-center justify-center text-white text-xl mb-6 shadow-lg shadow-indigo-900/40">
+                        <i class="fa-solid fa-bolt"></i>
+                    </div>
+                    <h3 class="text-xl font-extrabold mb-3 leading-snug">هل تحتاج إلى إصلاح الآن؟</h3>
+                    <p class="text-slate-400 text-sm mb-6 leading-relaxed">معظم الإصلاحات تتم في 24-48 ساعة. تشخيص مجاني.</p>
+                    <a href="tel:+97471028090" class="block text-center bg-primary text-white px-6 py-3 rounded-full font-bold text-sm btn-hover transition-all shadow-lg shadow-indigo-900/30">
+                        اتصل على 71028090 974+
+                    </a>
+                </div>
+            </aside>
+        </div>
+    </section>
+
+    <section class="max-w-7xl mx-auto px-6 md:px-12 pb-20">
+        <div class="bg-dark rounded-[3rem] p-12 md:p-16 relative overflow-hidden flex flex-col md:flex-row justify-between items-center gap-10">
+            <div class="relative z-10 text-white">
+                <h2 class="text-4xl font-extrabold mb-4">هل ما زال لديك سؤال؟</h2>
+                <p class="text-slate-400">تحدث مع فريقنا في الدوحة - تواصل معنا عبر الهاتف أو الواتساب.</p>
+            </div>
+            <div class="flex flex-col sm:flex-row gap-4 relative z-10">
+                <a href="tel:+97471028090" class="bg-primary text-white px-8 py-4 rounded-full font-bold">اتصل الآن</a>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-dark text-white pt-20 pb-10">
+        <div class="max-w-7xl mx-auto px-6 md:px-12">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-12 mb-20">
+                <div>
+                    <h4 class="text-xl font-bold mb-8">INFINOWA</h4>
+                    <p class="text-slate-400 text-sm">شريكك الموثوق في قطر لإصلاح أجهزة اللابتوب والموبايل.</p>
+                </div>
+                <div>
+                    <h4 class="text-xl font-bold mb-8">الخدمات</h4>
+                    <ul class="space-y-4 text-slate-400 text-sm">
+                        <li>إصلاح اللابتوب</li>
+                        <li>إصلاح الماك</li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-xl font-bold mb-8">المدونة</h4>
+                    <ul class="space-y-4 text-slate-400 text-sm">
+                        <li>أدلة تقنية</li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-xl font-bold mb-8">روابط سريعة</h4>
+                    <ul class="space-y-4 text-slate-400 text-sm">
+                        <li>من نحن</li>
+                        <li>اتصل بنا</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="text-center text-slate-500 text-xs border-t border-white/5 pt-10">
+                <p>جميع الحقوق محفوظة © INFINOWA 2025</p>
+            </div>
+        </div>
+    </footer>
+
+    <div id="articleModal" class="fixed inset-0 z-[100] flex items-center justify-center p-4 bg-black/60 backdrop-blur-sm opacity-0 pointer-events-none transition-opacity duration-300">
+        <div class="bg-white rounded-[2rem] max-w-2xl w-full p-10">
+            <button onclick="closeArticleModal()" class="mb-6"><i class="fa-solid fa-xmark"></i></button>
+            <h2 id="modalArticleTitle" class="text-2xl font-extrabold mb-4"></h2>
+            <p>هذا المقال جزء من سلسلة أدلة الإصلاح الخاصة بـ INFINOWA.</p>
+        </div>
+    </div>
+
+    <script>
+        function openPost(title) {
+            document.getElementById('modalArticleTitle').textContent = title;
+            document.getElementById('articleModal').classList.remove('opacity-0','pointer-events-none');
+        }
+        function closeArticleModal() {
+            document.getElementById('articleModal').classList.add('opacity-0','pointer-events-none');
+        }
+    </script>
+</body>
+</html>
